@@ -1,0 +1,7 @@
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\bin\Debug\Itanio.Leads.DataAccess.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\bin\Debug\Itanio.Leads.DataAccess.pdb
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\bin\Debug\Itanio.Leads.Domain.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\bin\Debug\Itanio.Leads.Domain.pdb
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Debug\Itanio.Leads.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Debug\Itanio.Leads.DataAccess.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Debug\Itanio.Leads.DataAccess.pdb

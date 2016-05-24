@@ -10,7 +10,7 @@ namespace Itanio.Leads.Domain.Entidades
     {
         public virtual ICollection<Arquivo> Arquivos { get; set; }
 
-        public virtual ICollection<Usuario> Usuarios { get; set; }
+        public virtual ICollection<Visitante> Visitantes { get; set; }
 
         public string Nome { get; set; }
 

@@ -6,7 +6,7 @@ namespace Itanio.Leads.Domain.Entidades
     {
         public DateTime DataHoraAcesso { get; set; }
 
-        public virtual Usuario Usuario { get; set; }
+        public virtual Visitante Visitante { get; set; }
 
         public virtual Arquivo Arquivo { get; set; }
 

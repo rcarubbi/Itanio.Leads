@@ -6,10 +6,10 @@ namespace Itanio.Leads.Domain.Entidades
     {
         public string Nome { get; set; }
 
+        public string Senha { get; set; }
+
+        public string Conta { get; set; }
+
         public string Email { get; set; }
-
-        public string Guid { get; set; }
-
-        public virtual ICollection<Projeto> Projetos { get; set; }
     }
 }

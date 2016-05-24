@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Leads - Login</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/font-awesome/css")
+    @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+</head>
+<body class="top-navigation  pace-done">
+    <div id="wrapper">
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom white-bg">
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand">Leads</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="wrapper wrapper-content">
+                <div class="container">
+                    @RenderBody()
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <strong>Copyright</strong> Itanio © 2016-2016
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/plugins/iCheck")
+    @Scripts.Render("~/bundles/inspinia")
+    @RenderSection("scripts", false)
+</body>
+</html>

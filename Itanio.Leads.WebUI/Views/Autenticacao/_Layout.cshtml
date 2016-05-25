@@ -7,9 +7,10 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Leads - Login</title>
-    @Styles.Render("~/Content/css")
     @Styles.Render("~/font-awesome/css")
     @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+    @Styles.Render("~/plugins/toastrStyles")
+    @Styles.Render("~/Content/css")
 </head>
 <body class="top-navigation  pace-done">
     <div id="wrapper">
@@ -36,8 +37,10 @@
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/plugins/slimScroll")
     @Scripts.Render("~/plugins/iCheck")
-    @Scripts.Render("~/bundles/inspinia")
+    @Scripts.Render("~/plugins/toastr")
+    @Scripts.Render("~/bundles/app")
     @RenderSection("scripts", false)
 </body>
 </html>

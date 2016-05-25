@@ -62,6 +62,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto.cs" />
+    <Compile Include="Migrations\201605241905490_ModeloInicial.cs" />
+    <Compile Include="Migrations\201605241905490_ModeloInicial.Designer.cs">
+      <DependentUpon>201605241905490_ModeloInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605251719314_NovosCampos.cs" />
+    <Compile Include="Migrations\201605251719314_NovosCampos.Designer.cs">
+      <DependentUpon>201605251719314_NovosCampos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +82,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201605241905490_ModeloInicial.resx">
+      <DependentUpon>201605241905490_ModeloInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605251719314_NovosCampos.resx">
+      <DependentUpon>201605251719314_NovosCampos.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -33,7 +33,7 @@
                             @Html.LabelFor(model => model.MantenhaMeConectado, htmlAttributes: new { @class = "control-label col-md-4" })
                             <div class="col-md-8">
                                 <div class="checkbox">
-                                    @Html.CheckBoxFor(model => model.MantenhaMeConectado, new { @class = "i-checks" })
+                                    @Html.EditorFor(model => model.MantenhaMeConectado)
                                     @Html.ValidationMessageFor(model => model.MantenhaMeConectado, "", new { @class = "text-danger" })
                                 </div>
                             </div>

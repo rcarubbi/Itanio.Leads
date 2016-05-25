@@ -1,5 +1,6 @@
 ﻿using Carubbi.Mailer.Interfaces;
 using Carubbi.Utils.Data;
+using Carubbi.Utils.IoC;
 using Itanio.Leads.Domain;
 using Itanio.Leads.Domain.Entidades;
 using Itanio.Leads.Domain.Repositorios;
@@ -57,7 +58,7 @@ namespace Itanio.Leads.WebUI.Servicos
             message.Body = corpo;
 
 
-            var sender = Carubbi.Utils.IoC.ImplementationResolver.Resolve<IMailSender>();
+            var sender = ImplementationResolver.Resolve<IMailSender>();
             sender.Host = parametroRepo.ObterValorPorChave(Parametro.SMTP_SERVIDOR);
             sender.PortNumber = parametroRepo.ObterValorPorChave(Parametro.SMTP_PORTA).To(587);
             sender.UseSSL = parametroRepo.ObterValorPorChave(Parametro.SMTP_USA_SSL).To(true);

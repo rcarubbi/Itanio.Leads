@@ -13,5 +13,7 @@ namespace Itanio.Leads.Domain.Entidades
         public string Email { get; set; }
 
         public string Guid { get; set; }
+
+        public virtual ICollection<Acesso> Acessos { get; set; }
     }
 }

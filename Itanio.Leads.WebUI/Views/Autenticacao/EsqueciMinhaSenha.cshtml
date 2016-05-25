@@ -1,0 +1,44 @@
+﻿@model Itanio.Leads.WebUI.Models.EsqueciMinhaSenhaViewModel
+
+
+<div class="row">
+    <div class="col-sm-offset-2 col-sm-8">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Esqueci minha senha</h5>
+            </div>
+            <div class="ibox-content">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Email)
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Enviar nova senha" class="btn btn-primary" />
+                                @Html.ActionLink("Acesse o Leads", "Login", "Autenticacao", null, new { @class = "btn btn-default" })
+                            </div>
+                        </div>
+                  
+                        @if (!string.IsNullOrEmpty(ViewBag.Mensagem))
+                        {
+                            <div class="alert alert-success">
+                                @ViewBag.Mensagem
+                            </div>
+                        }
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+

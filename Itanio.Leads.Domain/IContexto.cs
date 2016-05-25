@@ -7,7 +7,5 @@ namespace Itanio.Leads.Domain
         void Salvar();
 
         void Atualizar<TEntidade>(TEntidade objetoAntigo, TEntidade objetoNovo) where TEntidade : class;
-
-       
     }
 }

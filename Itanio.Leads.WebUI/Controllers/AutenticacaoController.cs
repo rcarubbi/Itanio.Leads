@@ -37,7 +37,7 @@ namespace Itanio.Leads.WebUI.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("UsuarioOuSenhaInvalidos", "Usuário ou Senha inválidos");
+                    ModelState.AddModelError("", "Usuário ou Senha inválidos");
                 }
             }
 
@@ -66,7 +66,7 @@ namespace Itanio.Leads.WebUI.Controllers
                 else
                 {
                     ViewBag.Mensagem = "";
-                    ModelState.AddModelError("EmailNaoEncontrado", "E-mail não encontrado");
+                    ModelState.AddModelError("Email", "E-mail não encontrado");
                 }
             }
             return View(viewModel);

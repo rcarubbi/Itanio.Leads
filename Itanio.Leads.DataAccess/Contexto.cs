@@ -1,5 +1,4 @@
-﻿using Carubbi.GenericRepository;
-using Carubbi.Utils.Persistence;
+﻿using Carubbi.Utils.Persistence;
 using Itanio.Leads.Domain;
 using Itanio.Leads.Domain.Entidades;
 using System;
@@ -8,8 +7,6 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Itanio.Leads.DataAccess
 {
@@ -39,8 +36,12 @@ namespace Itanio.Leads.DataAccess
             modelBuilder.Entity<Parametro>();
             modelBuilder.Entity<Log>();
             modelBuilder.Entity<Usuario>();
+            modelBuilder.Entity<Projeto>().HasMany(p => p.Arquivos).WithRequired(a => a.Projeto);
+            modelBuilder.Entity<Arquivo>().HasMany(a => a.Acessos).WithOptional(a => a.Arquivo);
+            modelBuilder.Entity<Acesso>().HasRequired(a => a.Visitante).WithMany(a => a.Acessos);
+            modelBuilder.Entity<Acesso>().HasRequired(a => a.Projeto).WithMany(a => a.Acessos);
         }
- 
+
         public void Atualizar<TEntidade>(TEntidade objetoAntigo, TEntidade objetoNovo) where TEntidade : class
         {
             Entry(objetoAntigo).CurrentValues.SetValues(objetoNovo);

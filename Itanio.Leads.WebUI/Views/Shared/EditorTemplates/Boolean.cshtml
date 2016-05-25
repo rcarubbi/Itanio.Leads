@@ -1,0 +1,19 @@
+﻿@using System.ComponentModel.DataAnnotations;
+
+@model Boolean
+
+@{
+    var name = ViewData.TemplateInfo.HtmlFieldPrefix;
+    var display = ViewData.ModelMetadata.DisplayName;
+
+
+}
+<div class="input-group">
+
+    <label class="checkbox" title="@display">
+        @Html.CheckBoxFor(m => m, new { @class = "i-checks" })
+    </label>
+
+</div>
+
+

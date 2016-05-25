@@ -2,7 +2,6 @@
 using Itanio.Leads.Domain;
 using Itanio.Leads.Domain.Repositorios;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
@@ -13,17 +12,14 @@ namespace Itanio.Leads.WebApi
     {
         public static void Register(HttpConfiguration config)
         {
-            var projetos = ObterProjetos();
-            if (string.IsNullOrEmpty(projetos))
+            var dominios = ObterDominios();
+            if (string.IsNullOrEmpty(dominios))
             {
-                config.EnableCors();
+                dominios = "*";
             }
-            else
-            {
-                // Web API configuration and services
-                var cors = new EnableCorsAttribute(projetos, "*", "*");
-                config.EnableCors(cors);
-            }
+         
+            var cors = new EnableCorsAttribute(dominios, "*", "*");
+            config.EnableCors(cors);
             // Web API routes
             config.MapHttpAttributeRoutes();
 
@@ -34,11 +30,11 @@ namespace Itanio.Leads.WebApi
             );
         }
 
-        private static string ObterProjetos()
+        private static string ObterDominios()
         {
             IContexto contexto = new Contexto();
             RepositorioProjeto projetoRepo = new RepositorioProjeto(contexto);
-            return string.Join(", ", projetoRepo.ListarAtivos().Select(x => x.UrlBase));
+            return string.Join(", ", projetoRepo.ListarAtivos().Select(x => string.Format("{0}://{1}", new Uri(x.UrlBase).Scheme, new Uri(x.UrlBase).Host)));
         }
     }
 }

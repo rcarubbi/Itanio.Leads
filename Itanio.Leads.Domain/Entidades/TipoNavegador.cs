@@ -7,6 +7,7 @@
         InternetExplorer,
         Safari,
         Edge,
-        Opera
+        Opera,
+        Blink
     }
 }

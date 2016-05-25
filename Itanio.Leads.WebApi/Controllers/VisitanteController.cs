@@ -1,5 +1,4 @@
 ﻿using Itanio.Leads.Domain;
-using Itanio.Leads.Domain.Entidades;
 using Itanio.Leads.WebApi.Models;
 using Itanio.Leads.WebApi.Servicos;
 using System.Web.Http;
@@ -16,12 +15,12 @@ namespace Itanio.Leads.WebApi.Controllers
         }
 
         // POST: api/Visitante
-        [ResponseType(typeof(Visitante))]
+        [ResponseType(typeof(VisitanteViewModel))]
         public IHttpActionResult Post(VisitanteViewModel viewModel)
         {
             ServicoVisitante visitanteServ = new ServicoVisitante(_contexto);
             var visitante = visitanteServ.CriarVisitante(viewModel.Nome, viewModel.Email, viewModel.Guid, viewModel.IdProjeto, viewModel.IdArquivo);
-            return CreatedAtRoute("DefaultApi", new { id = visitante.Id }, visitante);
+            return CreatedAtRoute("DefaultApi", new { id = visitante.Id }, viewModel);
         }
 
     

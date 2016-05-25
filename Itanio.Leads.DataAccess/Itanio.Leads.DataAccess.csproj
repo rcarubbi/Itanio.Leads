@@ -70,6 +70,10 @@
     <Compile Include="Migrations\201605251719314_NovosCampos.Designer.cs">
       <DependentUpon>201605251719314_NovosCampos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605252004502_OpcionalidadeVisitanteAcesso.cs" />
+    <Compile Include="Migrations\201605252004502_OpcionalidadeVisitanteAcesso.Designer.cs">
+      <DependentUpon>201605252004502_OpcionalidadeVisitanteAcesso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605251719314_NovosCampos.resx">
       <DependentUpon>201605251719314_NovosCampos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605252004502_OpcionalidadeVisitanteAcesso.resx">
+      <DependentUpon>201605252004502_OpcionalidadeVisitanteAcesso.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

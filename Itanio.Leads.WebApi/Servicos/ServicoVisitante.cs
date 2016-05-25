@@ -12,7 +12,7 @@ namespace Itanio.Leads.WebApi.Servicos
 {
     public class ServicoVisitante
     {
-       
+
         private IContexto _contexto;
         public ServicoVisitante(IContexto contexo)
         {
@@ -38,7 +38,7 @@ namespace Itanio.Leads.WebApi.Servicos
 
             var projeto = projetoRepo.ObterPorId(idProjeto);
             var arquivo = projeto.Arquivos.Single(a => a.Id == idArquivo);
-            
+
             var visitante = ObterVisitante(email);
 
             if (visitante == null)
@@ -73,13 +73,14 @@ namespace Itanio.Leads.WebApi.Servicos
             MailMessage message = new MailMessage();
             message.To.Add(visitante.Email);
             message.From = new MailAddress(parametroRepo.ObterValorPorChave(Parametro.REMETENTE_EMAIL));
-            message.Subject = "Gastro Educação - Recuperação de senha";
+            message.Subject = "Assunto";
             message.IsBodyHtml = true;
             var corpo = arquivo.Projeto.TemplateEmail;
-            corpo = corpo.Replace("{{link}}", Path.Combine(arquivo.Projeto.UrlBase, arquivo.Url, arquivo.NomeArquivo));
-            corpo = corpo.Replace("{{Nome}}", visitante.Nome);
-
-            message.Body = arquivo.Projeto.TemplateEmail;
+            corpo = corpo.Replace("{{nome}}", visitante.Nome)
+                          .Replace("{{urlbase}}", arquivo.Projeto.UrlBase)
+                          .Replace("{{email}}", visitante.Email)
+                          .Replace("{{IdArquivo}}", arquivo.Id.ToString());
+            message.Body = corpo;
 
             sender.Send(message);
         }

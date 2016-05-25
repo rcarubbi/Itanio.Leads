@@ -15,8 +15,6 @@ namespace Itanio.Leads.WebApi.Models
 
         public string TipoNavegador { get; set; }
 
-        public string Nome { get; set; }
-
         public string Email { get; set; }
 
         public int IdArquivo { get; set; }

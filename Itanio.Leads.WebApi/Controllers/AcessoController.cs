@@ -4,6 +4,8 @@ using Itanio.Leads.Domain.Repositorios;
 using Itanio.Leads.WebApi.Models;
 using Itanio.Leads.WebApi.Servicos;
 using System.Linq;
+using System.Web;
+using System.Web.Http;
 
 namespace Itanio.Leads.WebApi.Controllers
 {
@@ -16,8 +18,10 @@ namespace Itanio.Leads.WebApi.Controllers
         }
 
         // POST api/values
-        public void Post(AcessoViewModel acesso)
+        public void Post([FromBody]AcessoViewModel acesso)
         {
+            acesso.IP = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"].ToString();
+            
             RepositorioProjeto projetoRepo = new RepositorioProjeto(_contexto);
 
             Projeto projeto = projetoRepo.ObterPorId(acesso.IdProjeto);

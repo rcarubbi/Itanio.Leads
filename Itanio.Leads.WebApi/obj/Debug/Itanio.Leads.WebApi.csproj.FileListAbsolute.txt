@@ -12,7 +12,6 @@ C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Microsoft
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Newtonsoft.Json.dll
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Ninject.dll
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Ninject.Web.Common.dll
-C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Ninject.Web.Mvc.dll
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\System.Linq.Dynamic.dll
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\System.Net.Http.Formatting.dll
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\System.Web.Cors.dll
@@ -36,7 +35,6 @@ C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\EntityFra
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Newtonsoft.Json.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Ninject.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Ninject.Web.Common.xml
-C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Ninject.Web.Mvc.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\System.Web.Http.Cors.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\System.Net.Http.Formatting.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\System.Web.Helpers.xml
@@ -57,3 +55,7 @@ C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Carubbi.M
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\OpenPop.dll
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Carubbi.Mailer.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Carubbi.Mailer.Interfaces.xml
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Ninject.Web.WebApi.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Ninject.Web.WebApi.WebHost.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Ninject.Web.WebApi.xml
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebApi\bin\Ninject.Web.WebApi.WebHost.xml

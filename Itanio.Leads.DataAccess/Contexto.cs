@@ -38,7 +38,7 @@ namespace Itanio.Leads.DataAccess
             modelBuilder.Entity<Usuario>();
             modelBuilder.Entity<Projeto>().HasMany(p => p.Arquivos).WithRequired(a => a.Projeto);
             modelBuilder.Entity<Arquivo>().HasMany(a => a.Acessos).WithOptional(a => a.Arquivo);
-            modelBuilder.Entity<Acesso>().HasRequired(a => a.Visitante).WithMany(a => a.Acessos);
+            modelBuilder.Entity<Acesso>().HasOptional(a => a.Visitante).WithMany(a => a.Acessos);
             modelBuilder.Entity<Acesso>().HasRequired(a => a.Projeto).WithMany(a => a.Acessos);
         }
 

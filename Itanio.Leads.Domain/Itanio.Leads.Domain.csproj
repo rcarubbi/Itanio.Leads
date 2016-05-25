@@ -73,6 +73,7 @@
     <Compile Include="IContexto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\RepositorioAcesso.cs" />
+    <Compile Include="Repositorios\RepositorioArquivo.cs" />
     <Compile Include="Repositorios\RepositorioParametro.cs" />
     <Compile Include="Repositorios\RepositorioProjeto.cs" />
     <Compile Include="Repositorios\RepositorioUsuario.cs" />

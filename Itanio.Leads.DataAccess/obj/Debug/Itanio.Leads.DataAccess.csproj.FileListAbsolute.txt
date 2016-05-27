@@ -18,3 +18,4 @@ C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Debug
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Debug\Itanio.Leads.DataAccess.csproj.GenerateResource.Cache
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Debug\Itanio.Leads.DataAccess.Migrations.NovosCampos.resources
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Debug\Itanio.Leads.DataAccess.Migrations.OpcionalidadeVisitanteAcesso.resources
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Debug\Itanio.Leads.DataAccess.Migrations.MultiplosGuids.resources

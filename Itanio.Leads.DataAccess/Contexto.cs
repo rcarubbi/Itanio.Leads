@@ -40,6 +40,7 @@ namespace Itanio.Leads.DataAccess
             modelBuilder.Entity<Arquivo>().HasMany(a => a.Acessos).WithOptional(a => a.Arquivo);
             modelBuilder.Entity<Acesso>().HasOptional(a => a.Visitante).WithMany(a => a.Acessos);
             modelBuilder.Entity<Acesso>().HasRequired(a => a.Projeto).WithMany(a => a.Acessos);
+            modelBuilder.Entity<Visitante>().HasMany(a => a.Identificadores);
         }
 
         public void Atualizar<TEntidade>(TEntidade objetoAntigo, TEntidade objetoNovo) where TEntidade : class

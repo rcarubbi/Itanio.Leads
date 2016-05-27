@@ -2,10 +2,7 @@ namespace Itanio.Leads.DataAccess.Migrations
 {
     using Carubbi.Utils.Security;
     using Domain.Entidades;
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Itanio.Leads.DataAccess.Contexto>
     {

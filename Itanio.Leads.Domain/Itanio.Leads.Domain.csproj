@@ -64,6 +64,7 @@
     <Compile Include="Entidades\Acesso.cs" />
     <Compile Include="Entidades\Arquivo.cs" />
     <Compile Include="Entidades\Entidade.cs" />
+    <Compile Include="Entidades\IdentificadorVisitante.cs" />
     <Compile Include="Entidades\Log.cs" />
     <Compile Include="Entidades\Parametro.cs" />
     <Compile Include="Entidades\Projeto.cs" />

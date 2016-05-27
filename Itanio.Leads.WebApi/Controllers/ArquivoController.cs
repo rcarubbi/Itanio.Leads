@@ -16,7 +16,7 @@ namespace Itanio.Leads.WebApi.Controllers
         {
             RepositorioArquivo arquivoRepo = new RepositorioArquivo(_contexto);
             var arquivo = arquivoRepo.ObterPorId(id);
-            return Path.Combine(arquivo.Projeto.UrlBase, arquivo.Url??string.Empty, arquivo.NomeArquivo);
+            return Path.Combine(arquivo.Url, arquivo.NomeArquivo);
         }
     }
 }

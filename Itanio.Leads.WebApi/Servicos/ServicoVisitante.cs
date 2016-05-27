@@ -4,6 +4,7 @@ using Carubbi.Utils.IoC;
 using Itanio.Leads.Domain;
 using Itanio.Leads.Domain.Entidades;
 using Itanio.Leads.Domain.Repositorios;
+using System;
 using System.IO;
 using System.Linq;
 using System.Net.Mail;
@@ -48,12 +49,30 @@ namespace Itanio.Leads.WebApi.Servicos
                     Nome = nome,
                     Email = email,
                     Ativo = true,
-                    Guid = guid
-                };
 
+                };
+                visitante.Identificadores.Add(new IdentificadorVisitante
+                {
+                    DataHora = DateTime.Now,
+                    Guid = guid,
+                    Ativo = true
+                });
                 SincronizarAcessos(visitante);
                 visitanteRepo.Adicionar(visitante);
             }
+            else if (!visitante.Identificadores.Any(i => i.Guid == guid))
+            {
+                visitante.Identificadores.Add(new IdentificadorVisitante
+                {
+                    Ativo = true,
+                    DataHora = DateTime.Now,
+                    Guid = guid
+                });
+                visitanteRepo.Atualizar(visitante);
+            }
+
+
+
 
             NotificarAcesso(visitante, arquivo);
 
@@ -88,7 +107,7 @@ namespace Itanio.Leads.WebApi.Servicos
         private void SincronizarAcessos(Visitante visitante)
         {
             RepositorioAcesso acessoRepo = new RepositorioAcesso(_contexto);
-            var acessosAnonimos = acessoRepo.ListarAnonimosPorGuid(visitante.Guid);
+            var acessosAnonimos = acessoRepo.ListarAnonimosPorGuid(visitante.Identificadores.Last().Guid);
             foreach (var acesso in acessosAnonimos)
             {
                 visitante.Acessos.Add(acesso);

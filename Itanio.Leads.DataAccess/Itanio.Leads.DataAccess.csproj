@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Itanio.Leads.DataAccess</RootNamespace>
     <AssemblyName>Itanio.Leads.DataAccess</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Carubbi.GenericRepository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Carubbi.GenericRepository.1.0.0.0\lib\net452\Carubbi.GenericRepository.dll</HintPath>
+      <HintPath>..\packages\Carubbi.GenericRepository.1.0.0.0\lib\net45\Carubbi.GenericRepository.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Carubbi.Utils, Version=1.4.2.9, Culture=neutral, processorArchitecture=MSIL">
@@ -111,6 +112,11 @@
     <EmbeddedResource Include="Migrations\201605301422551_AddAssuntoEmail.resx">
       <DependentUpon>201605301422551_AddAssuntoEmail.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\config.png" />
+    <Content Include="Resources\excel.png" />
+    <Content Include="Resources\play.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

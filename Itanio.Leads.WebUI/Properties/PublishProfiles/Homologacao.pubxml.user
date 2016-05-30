@@ -79,52 +79,52 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2016 15:17:23</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>10/09/2013 16:29:20</publishTime>
+      <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>10/09/2013 16:29:20</publishTime>
+      <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/Carubbi.Datatables.dll">
-      <publishTime>05/24/2016 12:34:20</publishTime>
+      <publishTime>05/30/2016 16:15:56</publishTime>
     </File>
     <File Include="bin/Carubbi.GenericRepository.dll">
-      <publishTime>05/23/2016 19:40:42</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Carubbi.Mailer.dll">
-      <publishTime>05/23/2016 19:31:10</publishTime>
+      <publishTime>05/30/2016 16:16:06</publishTime>
     </File>
     <File Include="bin/Carubbi.Mailer.Interfaces.dll">
-      <publishTime>05/23/2016 19:31:12</publishTime>
+      <publishTime>05/30/2016 16:16:08</publishTime>
     </File>
     <File Include="bin/Carubbi.Utils.dll">
-      <publishTime>05/23/2016 19:31:20</publishTime>
+      <publishTime>05/30/2016 16:16:14</publishTime>
     </File>
     <File Include="bin/DataTables.Mvc.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>02/03/2015 09:32:26</publishTime>
+      <publishTime>03/02/2015 09:32:26</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>02/03/2015 09:32:26</publishTime>
+      <publishTime>03/02/2015 09:32:26</publishTime>
     </File>
     <File Include="bin/Itanio.Leads.DataAccess.dll">
-      <publishTime>05/30/2016 13:11:24</publishTime>
+      <publishTime>05/30/2016 16:18:41</publishTime>
     </File>
     <File Include="bin/Itanio.Leads.DataAccess.pdb">
-      <publishTime>05/30/2016 13:11:24</publishTime>
+      <publishTime>05/30/2016 16:18:41</publishTime>
     </File>
     <File Include="bin/Itanio.Leads.Domain.dll">
-      <publishTime>05/30/2016 13:11:23</publishTime>
+      <publishTime>05/30/2016 16:18:41</publishTime>
     </File>
     <File Include="bin/Itanio.Leads.Domain.pdb">
-      <publishTime>05/30/2016 13:11:23</publishTime>
+      <publishTime>05/30/2016 16:18:41</publishTime>
     </File>
     <File Include="bin/Itanio.Leads.WebUI.dll">
-      <publishTime>05/30/2016 15:21:14</publishTime>
+      <publishTime>05/30/2016 16:18:41</publishTime>
     </File>
     <File Include="bin/Itanio.Leads.WebUI.pdb">
-      <publishTime>05/30/2016 15:21:14</publishTime>
+      <publishTime>05/30/2016 16:18:41</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>08/20/2015 08:08:40</publishTime>
@@ -136,7 +136,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/14/2016 21:30:06</publishTime>
     </File>
     <File Include="bin/Ninject.dll">
-      <publishTime>02/04/2014 18:40:18</publishTime>
+      <publishTime>04/02/2014 18:40:18</publishTime>
     </File>
     <File Include="bin/Ninject.Web.Common.dll">
       <publishTime>09/19/2014 16:32:52</publishTime>
@@ -256,7 +256,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2015 05:02:18</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>11/02/2014 16:26:04</publishTime>
+      <publishTime>02/11/2014 16:26:04</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
       <publishTime>01/28/2015 05:02:32</publishTime>
@@ -277,7 +277,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/23/2014 13:57:34</publishTime>
     </File>
     <File Include="Content/animate.css">
-      <publishTime>04/12/2014 13:27:32</publishTime>
+      <publishTime>12/04/2014 13:27:32</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
       <publishTime>05/24/2016 11:18:43</publishTime>
@@ -316,46 +316,46 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/24/2016 15:12:07</publishTime>
     </File>
     <File Include="Content/patterns/congruent_pentagon.png">
-      <publishTime>04/12/2014 13:28:44</publishTime>
+      <publishTime>12/04/2014 13:28:44</publishTime>
     </File>
     <File Include="Content/patterns/header-profile-skin-1.png">
-      <publishTime>04/12/2014 13:28:44</publishTime>
+      <publishTime>12/04/2014 13:28:44</publishTime>
     </File>
     <File Include="Content/patterns/header-profile-skin-2.png">
-      <publishTime>04/12/2014 13:28:44</publishTime>
+      <publishTime>12/04/2014 13:28:44</publishTime>
     </File>
     <File Include="Content/patterns/header-profile-skin-3.png">
-      <publishTime>04/12/2014 13:28:44</publishTime>
+      <publishTime>12/04/2014 13:28:44</publishTime>
     </File>
     <File Include="Content/patterns/header-profile.png">
-      <publishTime>04/12/2014 13:28:44</publishTime>
+      <publishTime>12/04/2014 13:28:44</publishTime>
     </File>
     <File Include="Content/patterns/otis_redding.png">
-      <publishTime>04/12/2014 13:28:44</publishTime>
+      <publishTime>12/04/2014 13:28:44</publishTime>
     </File>
     <File Include="Content/patterns/shattered.png">
-      <publishTime>04/12/2014 13:28:44</publishTime>
+      <publishTime>12/04/2014 13:28:44</publishTime>
     </File>
     <File Include="Content/patterns/triangular.png">
-      <publishTime>04/12/2014 13:28:44</publishTime>
+      <publishTime>12/04/2014 13:28:44</publishTime>
     </File>
     <File Include="Content/plugins/dataTables/dataTables.bootstrap.css">
       <publishTime>10/15/2015 11:01:18</publishTime>
     </File>
     <File Include="Content/plugins/dataTables/dataTables.responsive.css">
-      <publishTime>09/12/2014 17:57:06</publishTime>
+      <publishTime>12/09/2014 17:57:06</publishTime>
     </File>
     <File Include="Content/plugins/dataTables/dataTables.tableTools.min.css">
-      <publishTime>09/12/2014 17:57:06</publishTime>
+      <publishTime>12/09/2014 17:57:06</publishTime>
     </File>
     <File Include="Content/plugins/iCheck/custom.css">
-      <publishTime>09/12/2014 17:57:06</publishTime>
+      <publishTime>12/09/2014 17:57:06</publishTime>
     </File>
     <File Include="Content/plugins/iCheck/green%402x.png">
-      <publishTime>09/12/2014 17:57:06</publishTime>
+      <publishTime>12/09/2014 17:57:06</publishTime>
     </File>
     <File Include="Content/plugins/iCheck/green.png">
-      <publishTime>09/12/2014 17:57:06</publishTime>
+      <publishTime>12/09/2014 17:57:06</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>05/24/2016 18:37:22</publishTime>
@@ -403,7 +403,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/23/2016 16:21:36</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>05/30/2016 15:10:53</publishTime>
+      <publishTime>05/30/2016 16:18:08</publishTime>
+    </File>
+    <File Include="Resources/config.png">
+      <publishTime>05/30/2016 16:18:06</publishTime>
+    </File>
+    <File Include="Resources/excel.png">
+      <publishTime>05/30/2016 16:18:06</publishTime>
+    </File>
+    <File Include="Resources/play.png">
+      <publishTime>05/30/2016 16:18:06</publishTime>
     </File>
     <File Include="Scripts/app/app.js">
       <publishTime>05/24/2016 18:54:04</publishTime>
@@ -457,40 +466,40 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2015 18:39:10</publishTime>
     </File>
     <File Include="Scripts/plugins/dataTables/dataTables.responsive.js">
-      <publishTime>09/12/2014 15:46:44</publishTime>
+      <publishTime>12/09/2014 15:46:44</publishTime>
     </File>
     <File Include="Scripts/plugins/dataTables/dataTables.tableTools.min.js">
-      <publishTime>09/12/2014 15:46:46</publishTime>
+      <publishTime>12/09/2014 15:46:46</publishTime>
     </File>
     <File Include="Scripts/plugins/dataTables/jquery.dataTables.js">
-      <publishTime>09/12/2014 15:46:46</publishTime>
+      <publishTime>12/09/2014 15:46:46</publishTime>
     </File>
     <File Include="Scripts/plugins/dataTables/swf/copy_csv_xls.swf">
-      <publishTime>09/12/2014 15:46:46</publishTime>
+      <publishTime>12/09/2014 15:46:46</publishTime>
     </File>
     <File Include="Scripts/plugins/dataTables/swf/copy_csv_xls_pdf.swf">
-      <publishTime>09/12/2014 15:46:46</publishTime>
+      <publishTime>12/09/2014 15:46:46</publishTime>
     </File>
     <File Include="Scripts/plugins/iCheck/icheck.js">
       <publishTime>05/15/2015 11:37:12</publishTime>
     </File>
     <File Include="Scripts/plugins/iCheck/icheck.min.js">
-      <publishTime>09/12/2014 15:46:46</publishTime>
+      <publishTime>12/09/2014 15:46:46</publishTime>
     </File>
     <File Include="Scripts/plugins/mask/jquery.mask.js">
       <publishTime>06/26/2015 14:33:58</publishTime>
     </File>
     <File Include="Scripts/plugins/maskMoney/jquery.maskMoney.js">
-      <publishTime>05/10/2015 15:45:16</publishTime>
+      <publishTime>10/05/2015 15:45:16</publishTime>
     </File>
     <File Include="Scripts/plugins/metisMenu/metisMenu.min.js">
-      <publishTime>09/12/2014 19:15:20</publishTime>
+      <publishTime>12/09/2014 19:15:20</publishTime>
     </File>
     <File Include="Scripts/plugins/pace/pace.min.js">
       <publishTime>03/29/2015 10:27:34</publishTime>
     </File>
     <File Include="Scripts/plugins/slimscroll/jquery.slimscroll.min.js">
-      <publishTime>09/12/2014 15:46:42</publishTime>
+      <publishTime>12/09/2014 15:46:42</publishTime>
     </File>
     <File Include="Scripts/plugins/toastr/toastr.min.js">
       <publishTime>05/23/2015 11:12:20</publishTime>
@@ -574,7 +583,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/23/2016 16:21:36</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/30/2016 15:21:14</publishTime>
+      <publishTime>05/30/2016 16:18:42</publishTime>
     </File>
   </ItemGroup>
 </Project>

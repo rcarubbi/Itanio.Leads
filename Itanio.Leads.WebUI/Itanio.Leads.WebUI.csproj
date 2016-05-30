@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Itanio.Leads.WebUI</RootNamespace>
     <AssemblyName>Itanio.Leads.WebUI</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,11 +48,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Carubbi.Datatables, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Carubbi.Datatables.1.0.0.0\lib\net461\Carubbi.Datatables.dll</HintPath>
+      <HintPath>..\packages\Carubbi.Datatables.1.0.0.0\lib\net45\Carubbi.Datatables.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Carubbi.GenericRepository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Carubbi.GenericRepository.1.0.0.0\lib\net452\Carubbi.GenericRepository.dll</HintPath>
+      <HintPath>..\packages\Carubbi.GenericRepository.1.0.0.0\lib\net45\Carubbi.GenericRepository.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Carubbi.Mailer, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -109,6 +110,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Linq.Dynamic, Version=1.0.5840.25917, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Linq.Dynamic.1.0.6\lib\net40\System.Linq.Dynamic.dll</HintPath>
@@ -127,8 +129,7 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
       <Private>True</Private>
@@ -141,9 +142,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -185,6 +184,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.1.0\lib\net40\WebActivatorEx.dll</HintPath>
       <Private>True</Private>
@@ -256,10 +256,6 @@
     <Compile Include="Servicos\ServicoVisitante.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Leads.mdf" />
-    <Content Include="App_Data\Leads_log.ldf">
-      <DependentUpon>Leads.mdf</DependentUpon>
-    </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -324,7 +320,11 @@
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <None Include="Properties\PublishProfiles\Homologacao.pubxml" />
+    <None Include="Properties\PublishProfiles\Producao.pubxml" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
+    <Content Include="Resources\config.png" />
+    <Content Include="Resources\excel.png" />
+    <Content Include="Resources\play.png" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\inspinia.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -366,6 +366,7 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -389,7 +390,9 @@
     <Content Include="Views\Shared\EditorTemplates\Boolean.cshtml" />
     <Content Include="Views\Arquivo\ArquivoNaoDisponivel.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />

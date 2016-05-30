@@ -59,3 +59,7 @@ C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebUI\bin\System.Net
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebUI\bin\System.Web.Http.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebUI\bin\System.Web.Http.Cors.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebUI\bin\System.Web.Http.WebHost.xml
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebUI\bin\Ninject.Web.WebApi.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebUI\bin\Ninject.Web.WebApi.WebHost.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebUI\bin\Ninject.Web.WebApi.xml
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.WebUI\bin\Ninject.Web.WebApi.WebHost.xml

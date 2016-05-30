@@ -9,6 +9,5 @@ C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\S
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\Carubbi.Utils.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\EntityFramework.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\EntityFramework.SqlServer.xml
-C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\obj\Release\Itanio.Leads.Domain.csprojResolveAssemblyReference.cache
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\obj\Release\Itanio.Leads.Domain.dll
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\obj\Release\Itanio.Leads.Domain.pdb

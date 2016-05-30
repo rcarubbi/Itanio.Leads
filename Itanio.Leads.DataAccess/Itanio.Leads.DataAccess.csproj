@@ -78,6 +78,10 @@
     <Compile Include="Migrations\201605271430333_MultiplosGuids.Designer.cs">
       <DependentUpon>201605271430333_MultiplosGuids.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605301422551_AddAssuntoEmail.cs" />
+    <Compile Include="Migrations\201605301422551_AddAssuntoEmail.Designer.cs">
+      <DependentUpon>201605301422551_AddAssuntoEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -103,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605271430333_MultiplosGuids.resx">
       <DependentUpon>201605271430333_MultiplosGuids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605301422551_AddAssuntoEmail.resx">
+      <DependentUpon>201605301422551_AddAssuntoEmail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

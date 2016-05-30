@@ -17,5 +17,7 @@ namespace Itanio.Leads.Domain.Entidades
         public string UrlBase { get; set; }
 
         public string TemplateEmail { get; set; }
+
+        public string AssuntoEmail { get; set; }
     }
 }

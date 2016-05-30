@@ -52,7 +52,7 @@ namespace Itanio.Leads.DataAccess.Migrations
              new Parametro
              {
                  Chave = Parametro.SMTP_SENHA,
-                 Valor = "raphakf0612",
+                 Valor = "raphakf061208",
                  Ativo = true
              },
               new Parametro

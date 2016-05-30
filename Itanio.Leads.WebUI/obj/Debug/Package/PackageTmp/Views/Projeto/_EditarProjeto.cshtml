@@ -1,0 +1,71 @@
+﻿@model Itanio.Leads.WebUI.Models.ProjetoViewModel
+
+@{
+    var acaoEfetuada = "incluído";
+    var acao = "Inclusão";
+
+    if (Model.Id.HasValue)
+    {
+        acaoEfetuada = "alterado";
+        acao = "Alteração";
+    }
+}
+
+
+@using (Html.BeginForm("Editar", "Projeto", FormMethod.Post, new { id = "editar-projeto-form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Nome)
+                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UrlBase, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.UrlBase)
+                @Html.ValidationMessageFor(model => model.UrlBase, "", new { @class = "text-danger" })
+            </div>
+        </div>
+ 
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ativo, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Ativo)
+                @Html.ValidationMessageFor(model => model.Ativo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-9">
+                <input type="submit" value="Salvar" class="btn btn-primary modalFormButton"
+                       data-action-name="@Url.Action("Editar")"
+                       data-success-update-container-id="projeto-grid-container"
+                       data-success-notification-type="Success"
+                       data-success-notification-message="Projeto @acaoEfetuada com sucesso"
+                       data-success-notification-title="@acao de Projeto" />
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    (function () {
+        var $private = {};
+        $private.validar = function (e) {
+            e.preventDefault();
+            $(this).validate();
+            $("#form-modal-container").trigger("validated.pf.form", $(".modalFormButton")[0]);
+        };
+
+        $(document).on("submit", "#editar-projeto-form", $private.validar);
+        $.validator.unobtrusive.parse('#editar-projeto-form');
+    }());
+</script>

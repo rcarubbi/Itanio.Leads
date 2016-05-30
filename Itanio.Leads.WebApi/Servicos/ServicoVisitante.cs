@@ -92,7 +92,7 @@ namespace Itanio.Leads.WebApi.Servicos
             MailMessage message = new MailMessage();
             message.To.Add(visitante.Email);
             message.From = new MailAddress(parametroRepo.ObterValorPorChave(Parametro.REMETENTE_EMAIL));
-            message.Subject = "Assunto";
+            message.Subject = arquivo.Projeto.AssuntoEmail;
             message.IsBodyHtml = true;
             var corpo = arquivo.Projeto.TemplateEmail;
             corpo = corpo.Replace("{{nome}}", visitante.Nome)

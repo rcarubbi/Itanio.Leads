@@ -31,7 +31,7 @@ namespace Itanio.Leads.WebApi.Controllers
 
             ServicoVisitante visitanteServ = new ServicoVisitante(_contexto);
             Visitante visitante = visitanteServ.ObterVisitante(acesso.Email);
-            if (!visitante.Identificadores.Any(i => i.Guid == acesso.Guid))
+            if (visitante != null && !visitante.Identificadores.Any(i => i.Guid == acesso.Guid))
             {
                 visitante.Identificadores.Add(new IdentificadorVisitante {
                     Guid = acesso.Guid,

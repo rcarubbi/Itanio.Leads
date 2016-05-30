@@ -34,7 +34,7 @@ namespace Itanio.Leads.WebApi
         {
             IContexto contexto = new Contexto();
             RepositorioProjeto projetoRepo = new RepositorioProjeto(contexto);
-            return string.Join(", ", projetoRepo.ListarAtivos().Select(x => string.Format("{0}://{1}", new Uri(x.UrlBase).Scheme, new Uri(x.UrlBase).Host)));
+            return string.Join(", ", projetoRepo.ListarAtivos().Select(x => string.Format("{0}://{1}:{2}", new Uri(x.UrlBase).Scheme, new Uri(x.UrlBase).Host, new Uri(x.UrlBase).Port)));
         }
     }
 }

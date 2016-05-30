@@ -1,0 +1,14 @@
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\Itanio.Leads.Domain.dll.config
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\Itanio.Leads.Domain.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\Itanio.Leads.Domain.pdb
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\Carubbi.GenericRepository.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\Carubbi.Utils.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\EntityFramework.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\System.Linq.Dynamic.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\Carubbi.Utils.xml
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\EntityFramework.xml
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\obj\Release\Itanio.Leads.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\obj\Release\Itanio.Leads.Domain.dll
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\obj\Release\Itanio.Leads.Domain.pdb

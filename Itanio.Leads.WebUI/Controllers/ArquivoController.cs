@@ -3,10 +3,6 @@ using Itanio.Leads.Domain.Entidades;
 using Itanio.Leads.Domain.Repositorios;
 using Itanio.Leads.WebUI.ActionResults;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Itanio.Leads.WebUI.Controllers

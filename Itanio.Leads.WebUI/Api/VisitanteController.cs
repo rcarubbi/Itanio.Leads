@@ -1,6 +1,6 @@
-﻿using Itanio.Leads.WebUI.Models;
+﻿using Itanio.Leads.Domain;
+using Itanio.Leads.WebUI.Models;
 using Itanio.Leads.WebUI.Servicos;
-using Itanio.Leads.Domain;
 using System.Web.Http;
 using System.Web.Http.Description;
 

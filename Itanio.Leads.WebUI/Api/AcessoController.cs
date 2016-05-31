@@ -1,8 +1,8 @@
-﻿using Itanio.Leads.WebUI.Models;
-using Itanio.Leads.WebUI.Servicos;
-using Itanio.Leads.Domain;
+﻿using Itanio.Leads.Domain;
 using Itanio.Leads.Domain.Entidades;
 using Itanio.Leads.Domain.Repositorios;
+using Itanio.Leads.WebUI.Models;
+using Itanio.Leads.WebUI.Servicos;
 using System;
 using System.Linq;
 using System.Web;

@@ -326,9 +326,6 @@
     <None Include="Properties\PublishProfiles\Homologacao.pubxml" />
     <None Include="Properties\PublishProfiles\Producao.pubxml" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
-    <Content Include="Resources\config.png" />
-    <Content Include="Resources\excel.png" />
-    <Content Include="Resources\play.png" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\inspinia.js" />
     <Content Include="Scripts\bootstrap.js" />

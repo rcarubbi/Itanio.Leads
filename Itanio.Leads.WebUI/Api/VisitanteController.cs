@@ -18,6 +18,11 @@ namespace Itanio.Leads.WebUI.Api
         [ResponseType(typeof(VisitanteViewModel))]
         public IHttpActionResult Post(VisitanteViewModel viewModel)
         {
+            if (string.IsNullOrWhiteSpace(viewModel.Email))
+            {
+                return NotFound();
+            }
+
             ServicoVisitante visitanteServ = new ServicoVisitante(_contexto);
             var visitante = visitanteServ.CriarVisitante(viewModel.Nome, viewModel.Email, viewModel.Guid, viewModel.IdProjeto, viewModel.IdArquivo);
             return CreatedAtRoute("DefaultApi", new { id = visitante.Id }, viewModel);

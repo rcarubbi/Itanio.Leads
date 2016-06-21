@@ -55,8 +55,8 @@
       <HintPath>..\packages\Carubbi.GenericRepository.1.0.0.0\lib\net45\Carubbi.GenericRepository.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Carubbi.Mailer, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Carubbi.Mailer.1.1.0.0\lib\net45\Carubbi.Mailer.dll</HintPath>
+    <Reference Include="Carubbi.Mailer, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carubbi.Mailer.1.2.2.0\lib\net45\Carubbi.Mailer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Carubbi.Mailer.Interfaces, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -268,6 +268,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\images\Loading.gif" />
     <Content Include="Content\images\logo-small.png" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\patterns\congruent_pentagon.png" />
@@ -284,6 +285,7 @@
     <Content Include="Content\plugins\iCheck\custom.css" />
     <Content Include="Content\plugins\iCheck\green%402x.png" />
     <Content Include="Content\plugins\iCheck\green.png" />
+    <Content Include="Content\plugins\toastr\toastr.min.css" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />

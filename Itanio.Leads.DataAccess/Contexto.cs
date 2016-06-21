@@ -3,6 +3,7 @@ using Itanio.Leads.Domain;
 using Itanio.Leads.Domain.Entidades;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -16,6 +17,7 @@ namespace Itanio.Leads.DataAccess
         public Contexto()
               : base("name=StringConexao")
         {
+           
         }
         private Dictionary<Type, object> _dicionarioSerializadores = new Dictionary<Type, object>();
 
@@ -33,9 +35,15 @@ namespace Itanio.Leads.DataAccess
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            modelBuilder.Entity<Parametro>();
+            modelBuilder.Entity<Parametro>().Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<Usuario>().Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<Projeto>().Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<Arquivo>().Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<Acesso>().Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<Visitante>().Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<IdentificadorVisitante>().Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
             modelBuilder.Entity<Log>();
-            modelBuilder.Entity<Usuario>();
             modelBuilder.Entity<Projeto>().HasMany(p => p.Arquivos).WithRequired(a => a.Projeto);
             modelBuilder.Entity<Arquivo>().HasMany(a => a.Acessos).WithOptional(a => a.Arquivo);
             modelBuilder.Entity<Acesso>().HasOptional(a => a.Visitante).WithMany(a => a.Acessos);

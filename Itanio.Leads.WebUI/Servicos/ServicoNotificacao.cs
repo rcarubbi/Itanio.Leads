@@ -1,4 +1,5 @@
-﻿using Carubbi.Mailer.Interfaces;
+﻿using Carubbi.Mailer.Implementation;
+using Carubbi.Mailer.Interfaces;
 using Carubbi.Utils.Data;
 using Carubbi.Utils.IoC;
 using Itanio.Leads.Domain;
@@ -52,18 +53,19 @@ namespace Itanio.Leads.WebUI.Servicos
           
             MailMessage message = new MailMessage();
             message.To.Add(email);
-            message.From = new MailAddress(parametroRepo.ObterValorPorChave(Parametro.REMETENTE_EMAIL));
+            message.From = new MailAddress(parametroRepo.ObterValorPorChave(Parametro.REMETENTE_EMAIL), parametroRepo.ObterValorPorChave(Parametro.REMETENTE_EMAIL_NOME));
             message.Subject = "Gastro Educação - Recuperação de senha";
             message.IsBodyHtml = true;
             message.Body = corpo;
 
 
-            var sender = ImplementationResolver.Resolve<IMailSender>();
+            var sender = new SmtpSender();
             sender.Host = parametroRepo.ObterValorPorChave(Parametro.SMTP_SERVIDOR);
             sender.PortNumber = parametroRepo.ObterValorPorChave(Parametro.SMTP_PORTA).To(587);
             sender.UseSSL = parametroRepo.ObterValorPorChave(Parametro.SMTP_USA_SSL).To(true);
             sender.Username = parametroRepo.ObterValorPorChave(Parametro.SMTP_USUARIO);
             sender.Password = parametroRepo.ObterValorPorChave(Parametro.SMTP_SENHA);
+            sender.UseDefaultCredentials = parametroRepo.ObterValorPorChave(Parametro.SMTP_USAR_CREDENCIAIS_PADRAO).To(true);
 
             sender.Send(message);
         }

@@ -3,6 +3,8 @@ using Itanio.Leads.WebUI.Models;
 using Itanio.Leads.WebUI.Servicos;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Linq;
+using System;
 
 namespace Itanio.Leads.WebUI.Api
 {
@@ -24,7 +26,8 @@ namespace Itanio.Leads.WebUI.Api
             }
 
             ServicoVisitante visitanteServ = new ServicoVisitante(_contexto);
-            var visitante = visitanteServ.CriarVisitante(viewModel.Nome, viewModel.Email, viewModel.Guid, viewModel.IdProjeto, viewModel.IdArquivo);
+            var visitante = visitanteServ.CriarVisitante(viewModel.Nome, viewModel.Email, viewModel.Guid, new Guid(viewModel.IdProjeto), new Guid(viewModel.IdArquivo));
+            viewModel.Guid = visitante.Identificadores.Last().Guid;
             return CreatedAtRoute("DefaultApi", new { id = visitante.Id }, viewModel);
         }
 

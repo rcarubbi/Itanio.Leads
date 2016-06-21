@@ -13,10 +13,6 @@ C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\bin\Relea
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.Migrations.ModeloInicial.resources
-C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.Migrations.NovosCampos.resources
-C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.Migrations.OpcionalidadeVisitanteAcesso.resources
-C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.Migrations.MultiplosGuids.resources
-C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.Migrations.AddAssuntoEmail.resources
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.csproj.GenerateResource.Cache
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.dll
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.pdb

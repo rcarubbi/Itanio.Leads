@@ -17,10 +17,10 @@ namespace Itanio.Leads.WebUI.Controllers
 
         }
         // GET: Arquivo
-        public ActionResult Index(int id, string guid)
+        public ActionResult Index(string id, string guid)
         {
             RepositorioArquivo arquivoRepo = new RepositorioArquivo(_contexto);
-            Arquivo arquivo = arquivoRepo.ObterPorId(id);
+            Arquivo arquivo = arquivoRepo.ObterPorId(new Guid(id));
             RepositorioVisitante visitanteRepo = new RepositorioVisitante(_contexto);
             Visitante visitante = visitanteRepo.ObterPorGuid(guid);
             ViewBag.Url = arquivo.Projeto.UrlBase + $"/LandPage.html?IdArquivo={arquivo.Id}";

@@ -1,5 +1,6 @@
 ﻿using Itanio.Leads.Domain;
 using Itanio.Leads.Domain.Repositorios;
+using System;
 using System.IO;
 
 namespace Itanio.Leads.WebUI.Api
@@ -12,7 +13,7 @@ namespace Itanio.Leads.WebUI.Api
 
         }
 
-        public string Get(int id)
+        public string Get(Guid id)
         {
             RepositorioArquivo arquivoRepo = new RepositorioArquivo(_contexto);
             var arquivo = arquivoRepo.ObterPorId(id);

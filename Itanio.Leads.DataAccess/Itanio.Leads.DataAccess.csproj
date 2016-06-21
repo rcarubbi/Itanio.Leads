@@ -63,25 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto.cs" />
-    <Compile Include="Migrations\201605241905490_ModeloInicial.cs" />
-    <Compile Include="Migrations\201605241905490_ModeloInicial.Designer.cs">
-      <DependentUpon>201605241905490_ModeloInicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605251719314_NovosCampos.cs" />
-    <Compile Include="Migrations\201605251719314_NovosCampos.Designer.cs">
-      <DependentUpon>201605251719314_NovosCampos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605252004502_OpcionalidadeVisitanteAcesso.cs" />
-    <Compile Include="Migrations\201605252004502_OpcionalidadeVisitanteAcesso.Designer.cs">
-      <DependentUpon>201605252004502_OpcionalidadeVisitanteAcesso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605271430333_MultiplosGuids.cs" />
-    <Compile Include="Migrations\201605271430333_MultiplosGuids.Designer.cs">
-      <DependentUpon>201605271430333_MultiplosGuids.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605301422551_AddAssuntoEmail.cs" />
-    <Compile Include="Migrations\201605301422551_AddAssuntoEmail.Designer.cs">
-      <DependentUpon>201605301422551_AddAssuntoEmail.cs</DependentUpon>
+    <Compile Include="Migrations\201606212048095_ModeloInicial.cs" />
+    <Compile Include="Migrations\201606212048095_ModeloInicial.Designer.cs">
+      <DependentUpon>201606212048095_ModeloInicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,20 +81,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605241905490_ModeloInicial.resx">
-      <DependentUpon>201605241905490_ModeloInicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605251719314_NovosCampos.resx">
-      <DependentUpon>201605251719314_NovosCampos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605252004502_OpcionalidadeVisitanteAcesso.resx">
-      <DependentUpon>201605252004502_OpcionalidadeVisitanteAcesso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605271430333_MultiplosGuids.resx">
-      <DependentUpon>201605271430333_MultiplosGuids.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605301422551_AddAssuntoEmail.resx">
-      <DependentUpon>201605301422551_AddAssuntoEmail.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201606212048095_ModeloInicial.resx">
+      <DependentUpon>201606212048095_ModeloInicial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

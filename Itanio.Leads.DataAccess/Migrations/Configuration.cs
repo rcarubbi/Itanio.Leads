@@ -40,13 +40,19 @@ namespace Itanio.Leads.DataAccess.Migrations
            new Parametro
            {
                Chave = Parametro.REMETENTE_EMAIL,
-               Valor = "raphael@itanio.com.br",
+               Valor = "leads@itanio.com.br",
                Ativo = true
            },
+             new Parametro
+             {
+                 Chave = Parametro.REMETENTE_EMAIL_NOME,
+                 Valor = "Leads",
+                 Ativo = true
+             },
             new Parametro
             {
                 Chave = Parametro.SMTP_PORTA,
-                Valor = "587",
+                Valor = "25",
                 Ativo = true
             },
              new Parametro
@@ -64,13 +70,19 @@ namespace Itanio.Leads.DataAccess.Migrations
                new Parametro
                {
                    Chave = Parametro.SMTP_USA_SSL,
-                   Valor = "true",
+                   Valor = "false",
                    Ativo = true
                },
                new Parametro
                {
                    Chave = Parametro.SMTP_USUARIO,
                    Valor = "raphael@itanio.com.br",
+                   Ativo = true
+               },
+               new Parametro
+               {
+                   Chave = Parametro.SMTP_USAR_CREDENCIAIS_PADRAO,
+                   Valor = "true",
                    Ativo = true
                });
             context.Salvar();

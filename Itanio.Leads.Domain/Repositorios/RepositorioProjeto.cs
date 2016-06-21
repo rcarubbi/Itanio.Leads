@@ -12,7 +12,7 @@ namespace Itanio.Leads.Domain.Repositorios
             _contexto = contexto;
         }
 
-        public Projeto ObterPorId(int? id)
+        public Projeto ObterPorId(Guid id)
         {
             return _contexto.Set<Projeto>().Find(id);
         }

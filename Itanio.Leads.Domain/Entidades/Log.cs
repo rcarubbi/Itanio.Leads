@@ -14,7 +14,7 @@ namespace Itanio.Leads.Domain.Entidades
 
         public Usuario Usuario { get; set; }
 
-        public int IdEntitdade { get; set; }
+        public Guid IdEntitdade { get; set; }
 
         public string Tipo { get; set; }
     }

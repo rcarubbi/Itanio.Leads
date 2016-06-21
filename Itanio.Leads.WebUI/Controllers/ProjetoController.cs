@@ -28,14 +28,14 @@ namespace Itanio.Leads.WebUI.Controllers
               return View(new ProjetoViewModel());
         }
 
-        public ActionResult Editar(int? id)
+        public ActionResult Editar(string id)
         {
             ProjetoViewModel viewModel = new ProjetoViewModel();
             RepositorioProjeto projetoRepo = new RepositorioProjeto(_contexto);
 
-            if (id.HasValue)
+            if (!string.IsNullOrWhiteSpace(id))
             {
-                var projeto = projetoRepo.ObterPorId(id);
+                var projeto = projetoRepo.ObterPorId(new Guid(id));
                 viewModel = ProjetoViewModel.FromEntity(projeto);
             }
 
@@ -43,7 +43,7 @@ namespace Itanio.Leads.WebUI.Controllers
             {
                 Id = "EditarProjetoForm",
                 PartialViewName = "_EditarProjeto",
-                Title = string.Format("{0} de Projeto", id.HasValue ? "Alteração" : "Inclusão"),
+                Title = string.Format("{0} de Projeto", !string.IsNullOrWhiteSpace(id) ? "Alteração" : "Inclusão"),
                 ViewModel = viewModel,
                 Size = ModalSize.Medium
             };
@@ -57,9 +57,9 @@ namespace Itanio.Leads.WebUI.Controllers
             if (ModelState.IsValid)
             {
             
-                if (viewModel.Id.HasValue)
+                if (!string.IsNullOrEmpty(viewModel.Id))
                 {
-                    var projeto = projetoRepo.ObterPorId(viewModel.Id);
+                    var projeto = projetoRepo.ObterPorId(new Guid(viewModel.Id));
                     var projetoAlterado = ProjetoViewModel.ToEntity(viewModel, projeto.Arquivos);
                     projetoRepo.Atualizar(projetoAlterado);
                 }
@@ -77,11 +77,11 @@ namespace Itanio.Leads.WebUI.Controllers
             }
         }
 
-        public ActionResult Excluir(int id)
+        public ActionResult Excluir(string id)
         {
             ProjetoViewModel viewModel = new ProjetoViewModel();
             RepositorioProjeto projetoRepo = new RepositorioProjeto(_contexto);
-            Projeto projeto = projetoRepo.ObterPorId(id);
+            Projeto projeto = projetoRepo.ObterPorId(new Guid(id));
             viewModel = ProjetoViewModel.FromEntity(projeto);
 
             ModalQuestionViewModel modalViewModel = new ModalQuestionViewModel
@@ -107,7 +107,7 @@ namespace Itanio.Leads.WebUI.Controllers
         public ActionResult Excluir(ProjetoViewModel viewModel)
         {
             RepositorioProjeto projetoRepo = new RepositorioProjeto(_contexto);
-            Projeto projeto = projetoRepo.ObterPorId(viewModel.Id);
+            Projeto projeto = projetoRepo.ObterPorId(new Guid(viewModel.Id));
 
             projetoRepo.Excluir(projeto);
 

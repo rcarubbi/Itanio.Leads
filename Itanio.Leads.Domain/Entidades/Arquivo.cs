@@ -14,6 +14,7 @@ namespace Itanio.Leads.Domain.Entidades
 
         public string Url { get; set; }
 
+
         public virtual ICollection<Acesso> Acessos { get; set; }
     }
 }

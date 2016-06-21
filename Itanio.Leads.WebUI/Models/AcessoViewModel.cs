@@ -11,13 +11,13 @@ namespace Itanio.Leads.WebUI.Models
 
         public string UserAgentInfo { get; set; }
 
-        public int IdProjeto { get; set; }
+        public string IdProjeto { get; set; }
 
         public string TipoNavegador { get; set; }
 
         public string Email { get; set; }
 
-        public int IdArquivo { get; set; }
+        public string IdArquivo { get; set; }
 
         public string Guid { get; set; }
 

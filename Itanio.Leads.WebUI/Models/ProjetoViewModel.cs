@@ -1,13 +1,15 @@
 ﻿using Carubbi.Datatables;
 using Itanio.Leads.Domain.Entidades;
+using System;
 using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace Itanio.Leads.WebUI.Models
 {
     public class ProjetoViewModel
     {
         [DataTablesColumn(Hidden = true, PrimaryKey = true)]
-        public int? Id { get; set; }
+        public string Id { get; set; }
 
         [DataTablesColumn(Order = 1)]
         public string Nome { get; set; }
@@ -28,14 +30,27 @@ namespace Itanio.Leads.WebUI.Models
         [DataTablesColumn(Order = 3, Header = "URL base")]
         public string UrlBase { get; set; }
 
+        [AllowHtml]
+        public string TemplateEmail { get; set; }
+
+        public string AssuntoEmail { get; set; }
+
+        public string RemetenteEmail { get; set; }
+
+        public string RemetenteNome { get; set; }
+
         internal static ProjetoViewModel FromEntity(Projeto projeto)
         {
             return new ProjetoViewModel
             {
-                Id = projeto.Id,
+                Id = projeto.Id.ToString(),
                 Nome = projeto.Nome,
                 Ativo = projeto.Ativo,
-                UrlBase = projeto.UrlBase
+                UrlBase = projeto.UrlBase,
+                TemplateEmail = projeto.TemplateEmail,
+                AssuntoEmail = projeto.AssuntoEmail,
+                RemetenteEmail = projeto.RemetenteEmail,
+                RemetenteNome = projeto.RemetenteNome
             };
         }
 
@@ -44,9 +59,13 @@ namespace Itanio.Leads.WebUI.Models
             return new Projeto
             {
                 Ativo = viewModel.Ativo,
-                Id = viewModel.Id.HasValue? viewModel.Id.Value : 0,
+                Id = !string.IsNullOrWhiteSpace(viewModel.Id)? new Guid(viewModel.Id) : Guid.Empty,
                 Nome = viewModel.Nome,
                 UrlBase = viewModel.UrlBase,
+                TemplateEmail = viewModel.TemplateEmail,
+                AssuntoEmail = viewModel.AssuntoEmail,
+                RemetenteNome = viewModel.RemetenteNome,
+                RemetenteEmail = viewModel.RemetenteEmail,
                 Arquivos = arquivos
             };
         }

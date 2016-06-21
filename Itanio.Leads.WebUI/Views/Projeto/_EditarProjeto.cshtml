@@ -4,7 +4,7 @@
     var acaoEfetuada = "incluído";
     var acao = "Inclusão";
 
-    if (Model.Id.HasValue)
+    if (!string.IsNullOrEmpty(Model.Id))
     {
         acaoEfetuada = "alterado";
         acao = "Alteração";
@@ -40,6 +40,38 @@
             <div class="col-md-9">
                 @Html.EditorFor(model => model.Ativo)
                 @Html.ValidationMessageFor(model => model.Ativo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AssuntoEmail, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.AssuntoEmail)
+                @Html.ValidationMessageFor(model => model.AssuntoEmail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RemetenteNome, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.RemetenteNome)
+                @Html.ValidationMessageFor(model => model.RemetenteNome, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RemetenteEmail, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.RemetenteEmail)
+                @Html.ValidationMessageFor(model => model.RemetenteEmail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TemplateEmail, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.TemplateEmail)
+                @Html.ValidationMessageFor(model => model.TemplateEmail, "", new { @class = "text-danger" })
             </div>
         </div>
 

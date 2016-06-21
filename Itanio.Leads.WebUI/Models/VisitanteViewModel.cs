@@ -8,8 +8,8 @@
 
         public string Guid { get; set; }
 
-        public int IdProjeto { get; set; }
+        public string IdProjeto { get; set; }
 
-        public int IdArquivo { get; set; }
+        public string IdArquivo { get; set; }
     }
 }

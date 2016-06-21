@@ -1,4 +1,5 @@
 ﻿using Itanio.Leads.Domain.Entidades;
+using System;
 using System.Linq;
 
 namespace Itanio.Leads.Domain.Repositorios
@@ -11,7 +12,7 @@ namespace Itanio.Leads.Domain.Repositorios
             _contexto = contexto;
         }
 
-        public Arquivo ObterPorId(int id)
+        public Arquivo ObterPorId(Guid id)
         {
             return _contexto.Set<Arquivo>().Single(a => a.Id == id);
         }

@@ -5,6 +5,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using System.Linq;
 using System;
+using Itanio.Leads.Domain.Repositorios;
 
 namespace Itanio.Leads.WebUI.Api
 {
@@ -31,7 +32,19 @@ namespace Itanio.Leads.WebUI.Api
             return CreatedAtRoute("DefaultApi", new { id = visitante.Id }, viewModel);
         }
 
-    
-    
+        [ResponseType(typeof(VisitanteViewModel))]
+        public IHttpActionResult Get(string id)
+        {
+            RepositorioVisitante visitanteRepo = new RepositorioVisitante(_contexto);
+            var entidade = visitanteRepo.ObterPorIdentificador(id);
+            if (entidade == null)
+                return NotFound();
+            else
+            {
+                var visitante = VisitanteViewModel.FromEntity(entidade);
+                return Ok(visitante);
+            }
+        }
+
     }
 }

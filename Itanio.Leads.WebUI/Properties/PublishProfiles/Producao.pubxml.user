@@ -101,13 +101,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/31/2016 18:03:03</publishTime>
     </File>
     <File Include="bin/Itanio.Leads.DataAccess.dll">
-      <publishTime>06/21/2016 18:01:05</publishTime>
+      <publishTime>06/22/2016 12:52:48</publishTime>
     </File>
     <File Include="bin/Itanio.Leads.Domain.dll">
-      <publishTime>06/21/2016 18:01:05</publishTime>
+      <publishTime>06/22/2016 12:52:39</publishTime>
     </File>
     <File Include="bin/Itanio.Leads.WebUI.dll">
-      <publishTime>06/21/2016 18:05:42</publishTime>
+      <publishTime>06/22/2016 12:52:49</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.ServiceLocation.dll">
       <publishTime>05/05/2014 11:25:44</publishTime>
@@ -143,7 +143,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/26/2014 10:50:24</publishTime>
     </File>
     <File Include="bin/StructureMap.Web.dll">
-      <publishTime>08/11/2014 07:40:22</publishTime>
+      <publishTime>11/08/2014 07:40:22</publishTime>
     </File>
     <File Include="bin/System.Linq.Dynamic.dll">
       <publishTime>05/31/2016 18:03:04</publishTime>
@@ -442,6 +442,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Arquivo/ArquivoNaoDisponivel.cshtml">
       <publishTime>05/31/2016 18:03:03</publishTime>
     </File>
+    <File Include="Views/Arquivo/Error.cshtml">
+      <publishTime>06/22/2016 16:45:43</publishTime>
+    </File>
+    <File Include="Views/Arquivo/_Layout.cshtml">
+      <publishTime>06/22/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Views/Arquivo/_ViewStart.cshtml">
+      <publishTime>06/22/2016 16:45:01</publishTime>
+    </File>
     <File Include="Views/Autenticacao/EsqueciMinhaSenha.cshtml">
       <publishTime>05/31/2016 18:03:03</publishTime>
     </File>
@@ -476,7 +485,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/31/2016 18:03:03</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>05/31/2016 18:03:03</publishTime>
+      <publishTime>06/22/2016 17:08:40</publishTime>
     </File>
     <File Include="Views/Shared/_Footer.cshtml">
       <publishTime>05/31/2016 18:03:03</publishTime>
@@ -503,7 +512,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/31/2016 18:03:03</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/21/2016 18:01:13</publishTime>
+      <publishTime>06/22/2016 11:53:39</publishTime>
     </File>
   </ItemGroup>
 </Project>

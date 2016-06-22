@@ -26,7 +26,7 @@ namespace Itanio.Leads.Domain.Repositorios
             _contexto.Salvar();
         }
 
-        public Visitante ObterPorGuid(string guid)
+        public Visitante ObterPorIdentificador(string guid)
         {
             return _contexto.Set<Visitante>().SingleOrDefault(v => v.Identificadores.Any(i => i.Guid == guid));
         }

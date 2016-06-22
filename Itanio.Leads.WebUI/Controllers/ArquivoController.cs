@@ -22,7 +22,7 @@ namespace Itanio.Leads.WebUI.Controllers
             RepositorioArquivo arquivoRepo = new RepositorioArquivo(_contexto);
             Arquivo arquivo = arquivoRepo.ObterPorId(new Guid(id));
             RepositorioVisitante visitanteRepo = new RepositorioVisitante(_contexto);
-            Visitante visitante = visitanteRepo.ObterPorGuid(guid);
+            Visitante visitante = visitanteRepo.ObterPorIdentificador(guid);
             ViewBag.Url = arquivo.Projeto.UrlBase + $"/LandPage.html?IdArquivo={arquivo.Id}";
 
             var acesso = new Acesso();

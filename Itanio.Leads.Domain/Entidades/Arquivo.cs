@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Itanio.Leads.Domain.Entidades
 {
@@ -14,6 +10,7 @@ namespace Itanio.Leads.Domain.Entidades
 
         public string Url { get; set; }
 
+        public string Descricao { get; set; }
 
         public virtual ICollection<Acesso> Acessos { get; set; }
     }

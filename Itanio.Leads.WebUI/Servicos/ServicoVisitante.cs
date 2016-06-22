@@ -25,7 +25,7 @@ namespace Itanio.Leads.WebUI.Servicos
         {
             Visitante visitante = null;
             RepositorioVisitante visitanteRepo = new RepositorioVisitante(_contexto);
-            visitante = visitanteRepo.ObterPorGuid(guid.ToString());
+            visitante = visitanteRepo.ObterPorIdentificador(guid.ToString());
             return visitante;
         }
 
@@ -117,6 +117,8 @@ namespace Itanio.Leads.WebUI.Servicos
             message.IsBodyHtml = true;
             var corpo = arquivo.Projeto.TemplateEmail;
             corpo = corpo.Replace("{{nome}}", visitante.Nome)
+                          .Replace("{{primeiro_nome}}", visitante.Nome.Split(' ')[0])
+                          .Replace("{{descricao_arquivo}}", arquivo.Descricao)
                           .Replace("{{urlbase}}", arquivo.Projeto.UrlBase)
                           .Replace("{{email}}", visitante.Email)
                           .Replace("{{IdArquivo}}", arquivo.Id.ToString());

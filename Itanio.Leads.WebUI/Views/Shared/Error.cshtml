@@ -1,13 +1,61 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Error</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leads</title>
+
+    @Styles.Render("~/font-awesome/css")
+    @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+    @Styles.Render("~/plugins/toastrStyles")
+    @Styles.Render("~/Content/plugins/dataTables/dataTablesStyles")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
 </head>
 <body>
-    <hgroup>
-        <h1>Error.</h1>
-        <h2>An error occurred while processing your request.</h2>
-    </hgroup>
+    <!-- Wrapper-->
+    <div id="wrapper">
+
+
+
+        <!-- Page wraper -->
+        <div id="page-wrapper" class="gray-bg">
+            <!-- Top Navbar -->
+            @Html.Partial("_TopNavbar")
+        
+            <!-- Main view  -->
+            <hgroup>
+                <h1>Erro.</h1>
+                <h2> Ocorreu um erro durante sua requisição.</h2>
+            </hgroup>
+
+
+            <!-- Footer -->
+            @Html.Partial("_Footer")
+
+        </div>
+        <!-- End page wrapper-->
+
+    </div>
+    <!-- End wrapper-->
+
+    <div id="form-modal-container"></div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/plugins/slimScroll")
+    @Scripts.Render("~/plugins/iCheck")
+    @Scripts.Render("~/plugins/toastr")
+    @Scripts.Render("~/plugins/dataTables")
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/jqueryval")
+ 
+
 </body>
 </html>

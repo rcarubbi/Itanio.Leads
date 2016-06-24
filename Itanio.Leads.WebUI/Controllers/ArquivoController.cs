@@ -47,10 +47,9 @@ namespace Itanio.Leads.WebUI.Controllers
             else
             {
                 acesso.Url = $"{arquivo.Url}/{arquivo.NomeArquivo}";
-                Uri uri = new Uri(acesso.Url);
                 acessoRepo.Gravar(acesso);
-                string path = String.Format("{0}{1}{2}{3}", uri.Scheme, Uri.SchemeDelimiter, uri.Authority, uri.AbsolutePath);
-                return new ExternalFileResult(path);
+               
+                return new ExternalFileResult(acesso.Url);
             }
         }
     }

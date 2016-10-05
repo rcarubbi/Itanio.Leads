@@ -7,6 +7,7 @@ using System.Linq;
 using System;
 using Itanio.Leads.Domain.Repositorios;
 using Itanio.Leads.Domain.Entidades;
+using System.Web;
 
 namespace Itanio.Leads.WebUI.Api
 {
@@ -53,6 +54,7 @@ namespace Itanio.Leads.WebUI.Api
 
 
             RepositorioAcesso acessoRepo = new RepositorioAcesso(_contexto);
+            viewModel.IP = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"].ToString();
             acessoRepo.Gravar(viewModel.ToEntity(visitante, null, projeto));
 
             var visitanteViewModel = VisitanteViewModel.FromEntity(visitante);

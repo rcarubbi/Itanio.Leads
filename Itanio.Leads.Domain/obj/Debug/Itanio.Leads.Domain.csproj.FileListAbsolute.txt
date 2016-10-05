@@ -11,3 +11,4 @@ C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Debug\Ent
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\obj\Debug\Itanio.Leads.Domain.dll
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\obj\Debug\Itanio.Leads.Domain.pdb
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.Domain\obj\Debug\Itanio.Leads.Domain.csprojResolveAssemblyReference.cache

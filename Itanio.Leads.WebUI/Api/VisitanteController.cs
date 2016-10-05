@@ -6,6 +6,7 @@ using System.Web.Http.Description;
 using System.Linq;
 using System;
 using Itanio.Leads.Domain.Repositorios;
+using Itanio.Leads.Domain.Entidades;
 
 namespace Itanio.Leads.WebUI.Api
 {
@@ -15,6 +16,47 @@ namespace Itanio.Leads.WebUI.Api
             : base(contexto)
         {
 
+        }
+
+        [HttpPost]
+        [Route("api/Visitante/CriarContato", Name = "CriarContato")]
+        [ResponseType(typeof(VisitanteViewModel))]
+        public IHttpActionResult CriarContato(AcessoViewModel viewModel)
+        {
+            ServicoVisitante servicoVisitante = new ServicoVisitante(_contexto);
+            var visitante = servicoVisitante.ObterVisitante(viewModel.Email);
+            if (visitante != null)
+            {
+                return BadRequest();
+            }
+            
+            RepositorioProjeto projetoRepo = new RepositorioProjeto(_contexto);
+            var projeto = projetoRepo.ObterPorId(new Guid(viewModel.IdProjeto));
+            
+            visitante = new Visitante
+            {
+                    Nome = "Visitante",
+                    Email = viewModel.Email,
+                    Ativo = true,
+            };
+
+            var guidIdentificador = Guid.NewGuid().ToString();
+            visitante.Identificadores.Add(new IdentificadorVisitante
+            {
+                    DataHora = DateTime.Now,
+                    Guid = guidIdentificador,
+                    Ativo = true
+            });
+
+            RepositorioVisitante visitanteRepo = new RepositorioVisitante(_contexto);
+            visitanteRepo.Adicionar(visitante);
+
+
+            RepositorioAcesso acessoRepo = new RepositorioAcesso(_contexto);
+            acessoRepo.Gravar(viewModel.ToEntity(visitante, null, projeto));
+
+            var visitanteViewModel = VisitanteViewModel.FromEntity(visitante);
+            return CreatedAtRoute("CriarContato", new { id = visitante.Id.ToString() }, visitanteViewModel); 
         }
 
         // POST: api/Visitante

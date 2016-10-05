@@ -2,16 +2,13 @@
 using Itanio.Leads.Domain.Entidades;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Itanio.Leads.WebUI.Models
 {
     public class ArquivoViewModel
     {
         [DataTablesColumn(Hidden = true, PrimaryKey = true)]
-        public int? Id { get; set; }
+        public string Id { get; set; }
 
         [DataTablesColumn(Order = 1, Header = "Nome")]
         public string NomeArquivo { get; set; }
@@ -36,7 +33,7 @@ namespace Itanio.Leads.WebUI.Models
         {
             return new ArquivoViewModel
             {
-                Id = arquivo.Id,
+                Id = arquivo.Id.ToString(),
                 NomeArquivo = arquivo.NomeArquivo,
                 Ativo = arquivo.Ativo,
                 Url = arquivo.Url
@@ -48,7 +45,7 @@ namespace Itanio.Leads.WebUI.Models
             return new Arquivo
             {
                 Ativo = viewModel.Ativo,
-                Id = viewModel.Id.HasValue ? viewModel.Id.Value : 0,
+                Id = !string.IsNullOrWhiteSpace(viewModel.Id) ? new Guid(viewModel.Id) : Guid.Empty,
                 NomeArquivo = viewModel.NomeArquivo,
                 Projeto = projeto,
                 Url = viewModel.Url

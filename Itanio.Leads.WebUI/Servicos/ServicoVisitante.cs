@@ -44,6 +44,8 @@ namespace Itanio.Leads.WebUI.Servicos
             return visitante;
         }
 
+     
+
         public Visitante CriarVisitante(string nome, string email, string guid, Guid idProjeto, Guid idArquivo)
         {
             RepositorioVisitante visitanteRepo = new RepositorioVisitante(_contexto);

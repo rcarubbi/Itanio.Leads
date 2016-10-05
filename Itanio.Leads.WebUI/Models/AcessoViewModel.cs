@@ -21,7 +21,7 @@ namespace Itanio.Leads.WebUI.Models
 
         public string Guid { get; set; }
 
-        internal Acesso ToEntity(Visitante visitante, Arquivo arquivo, Projeto projeto)
+        public Acesso ToEntity(Visitante visitante, Arquivo arquivo, Projeto projeto)
         {
             return new Acesso
             {
@@ -37,5 +37,7 @@ namespace Itanio.Leads.WebUI.Models
                 Guid = this.Guid
             };
         }
+
+ 
     }
 }

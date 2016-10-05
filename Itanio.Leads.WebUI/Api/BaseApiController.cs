@@ -10,6 +10,7 @@ namespace Itanio.Leads.WebUI.Api
         public BaseApiController(IContexto contexto)
         {
             _contexto = contexto;
+            
         }
     }
 }

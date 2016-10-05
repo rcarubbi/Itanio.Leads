@@ -244,6 +244,8 @@
     <Compile Include="DependencyResolution\StructureMapWebApiDependencyScope.cs" />
     <Compile Include="Extensions\NavExtensions.cs" />
     <Compile Include="Models\AcessoViewModel.cs" />
+    <Compile Include="Models\ArquivoViewModel.cs" />
+    <Compile Include="Models\EditMode.cs" />
     <Compile Include="Models\ModalFormViewModel.cs" />
     <Compile Include="Models\ModalQuestionViewModel.cs" />
     <Compile Include="Models\ModalSize.cs" />

@@ -71,6 +71,10 @@
     <Compile Include="Migrations\201606221552441_addDescricaoArquivo.Designer.cs">
       <DependentUpon>201606221552441_addDescricaoArquivo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610181951437_AddLandPageToProject.cs" />
+    <Compile Include="Migrations\201610181951437_AddLandPageToProject.Designer.cs">
+      <DependentUpon>201610181951437_AddLandPageToProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606221552441_addDescricaoArquivo.resx">
       <DependentUpon>201606221552441_addDescricaoArquivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610181951437_AddLandPageToProject.resx">
+      <DependentUpon>201610181951437_AddLandPageToProject.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

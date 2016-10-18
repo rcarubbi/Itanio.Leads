@@ -34,6 +34,14 @@
                 @Html.ValidationMessageFor(model => model.UrlBase, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LandPage, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.LandPage)
+                @Html.ValidationMessageFor(model => model.LandPage, "", new { @class = "text-danger" })
+            </div>
+        </div>
  
         <div class="form-group">
             @Html.LabelFor(model => model.Ativo, htmlAttributes: new { @class = "control-label col-md-3" })

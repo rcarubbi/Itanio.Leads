@@ -39,6 +39,8 @@ namespace Itanio.Leads.WebUI.Models
 
         public string RemetenteNome { get; set; }
 
+
+        public string LandPage { get; set; }
         internal static ProjetoViewModel FromEntity(Projeto projeto)
         {
             return new ProjetoViewModel
@@ -50,7 +52,8 @@ namespace Itanio.Leads.WebUI.Models
                 TemplateEmail = projeto.TemplateEmail,
                 AssuntoEmail = projeto.AssuntoEmail,
                 RemetenteEmail = projeto.RemetenteEmail,
-                RemetenteNome = projeto.RemetenteNome
+                RemetenteNome = projeto.RemetenteNome,
+                LandPage = projeto.LandPage
             };
         }
 
@@ -66,7 +69,8 @@ namespace Itanio.Leads.WebUI.Models
                 AssuntoEmail = viewModel.AssuntoEmail,
                 RemetenteNome = viewModel.RemetenteNome,
                 RemetenteEmail = viewModel.RemetenteEmail,
-                Arquivos = arquivos
+                Arquivos = arquivos,
+                LandPage = viewModel.LandPage
             };
         }
 

@@ -23,7 +23,7 @@ namespace Itanio.Leads.WebUI.Controllers
             Arquivo arquivo = arquivoRepo.ObterPorId(new Guid(id));
             RepositorioVisitante visitanteRepo = new RepositorioVisitante(_contexto);
             Visitante visitante = visitanteRepo.ObterPorIdentificador(guid);
-            ViewBag.Url = arquivo.Projeto.UrlBase + $"/LandPage.html?IdArquivo={arquivo.Id}";
+            ViewBag.Url = arquivo.Projeto.UrlBase + "/" + arquivo.Projeto.LandPage + $"?IdArquivo={arquivo.Id}";
 
             var acesso = new Acesso();
             acesso.IP = HttpContext.Request.ServerVariables["REMOTE_ADDR"].ToString();

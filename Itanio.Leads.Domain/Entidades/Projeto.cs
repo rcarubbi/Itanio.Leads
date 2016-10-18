@@ -23,5 +23,7 @@ namespace Itanio.Leads.Domain.Entidades
         public string RemetenteEmail { get; set; }
 
         public string RemetenteNome { get; set; }
+
+        public string LandPage { get; set; }
     }
 }

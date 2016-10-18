@@ -39,3 +39,4 @@ C:\Users\rcaru\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Ita
 C:\Users\rcaru\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.dll
 C:\Users\rcaru\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.pdb
 C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.Migrations.addDescricaoArquivo.resources
+C:\Users\Itanio-PC24\Source\Repos\Itanio.Leads\Itanio.Leads.DataAccess\obj\Release\Itanio.Leads.DataAccess.Migrations.AddLandPageToProject.resources

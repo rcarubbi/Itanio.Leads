@@ -1,5 +1,6 @@
-﻿using Itanio.Leads.Domain.Entidades;
-using System.Linq;
+﻿using System.Linq;
+using Itanio.Leads.Domain.Entidades;
+
 namespace Itanio.Leads.WebUI.Models
 {
     public class VisitanteViewModel
@@ -25,7 +26,7 @@ namespace Itanio.Leads.WebUI.Models
                 Nome = visitante.Nome,
                 Ativo = visitante.Ativo,
                 Email = visitante.Email,
-                Guid = visitante.Identificadores.Last().Guid,
+                Guid = visitante.Identificadores.Last().Guid
             };
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace Itanio.Leads.Domain.Entidades
 {
-    public enum TipoNavegador 
+    public enum TipoNavegador
     {
         Chrome,
         Firefox,

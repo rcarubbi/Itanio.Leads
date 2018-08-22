@@ -1,7 +1,7 @@
-﻿using Carubbi.Datatables;
-using Itanio.Leads.Domain.Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Carubbi.Datatables;
+using Itanio.Leads.Domain.Entidades;
 
 namespace Itanio.Leads.WebUI.Models
 {
@@ -16,18 +16,12 @@ namespace Itanio.Leads.WebUI.Models
         public bool Ativo { get; set; }
 
         [DataTablesColumn(Order = 2, SortMap = "Ativo", Header = "Ativo")]
-        public string AtivoDescr
-        {
-            get
-            {
-                return Ativo
-                    ? "Sim"
-                    : "Não";
-            }
-        }
+        public string AtivoDescr => Ativo
+            ? "Sim"
+            : "Não";
 
         [DataTablesColumn(Order = 3, Header = "URL")]
-        public string Url  { get; set; }
+        public string Url { get; set; }
 
         internal static ArquivoViewModel FromEntity(Arquivo arquivo)
         {
@@ -54,10 +48,7 @@ namespace Itanio.Leads.WebUI.Models
 
         internal static IEnumerable<ArquivoViewModel> FromEntityCollection(IEnumerable<Arquivo> entities)
         {
-            foreach (var item in entities)
-            {
-                yield return FromEntity(item);
-            }
+            foreach (var item in entities) yield return FromEntity(item);
         }
     }
 }

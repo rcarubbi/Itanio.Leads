@@ -9,6 +9,7 @@ namespace Itanio.Leads.WebUI.ActionResults
     public class ExternalFileResult : ActionResult
     {
         private readonly string _url;
+
         public ExternalFileResult(string url)
         {
             _url = url;
@@ -16,25 +17,25 @@ namespace Itanio.Leads.WebUI.ActionResults
 
         public override void ExecuteResult(ControllerContext context)
         {
-            Uri uri = new Uri(_url);
-            string path = string.Format("{0}{1}{2}{3}", uri.Scheme, Uri.SchemeDelimiter, uri.Authority, uri.AbsolutePath);
+            var uri = new Uri(_url);
+            var path = string.Format("{0}{1}{2}{3}", uri.Scheme, Uri.SchemeDelimiter, uri.Authority, uri.AbsolutePath);
             //Create a stream for the file
             Stream stream = null;
 
             //This controls how many bytes to read at a time and send to the client
-            int bytesToRead = 10000;
+            var bytesToRead = 10000;
 
             // Buffer to read bytes in chunk size specified above
-            byte[] buffer = new Byte[bytesToRead];
+            var buffer = new byte[bytesToRead];
 
             // The number of bytes read
             try
             {
                 //Create a WebRequest to get the file
-                HttpWebRequest fileReq = (HttpWebRequest)WebRequest.Create(_url);
+                var fileReq = (HttpWebRequest) WebRequest.Create(_url);
 
                 //Create a response for this request
-                HttpWebResponse fileResp = (HttpWebResponse)fileReq.GetResponse();
+                var fileResp = (HttpWebResponse) fileReq.GetResponse();
 
                 if (fileReq.ContentLength > 0)
                     fileResp.ContentLength = fileReq.ContentLength;
@@ -79,11 +80,7 @@ namespace Itanio.Leads.WebUI.ActionResults
             }
             finally
             {
-                if (stream != null)
-                {
-                    //Close the input stream
-                    stream.Close();
-                }
+                if (stream != null) stream.Close();
             }
         }
     }

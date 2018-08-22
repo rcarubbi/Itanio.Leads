@@ -1,5 +1,5 @@
-﻿using Itanio.Leads.Domain.Entidades;
-using System;
+﻿using System;
+using Itanio.Leads.Domain.Entidades;
 
 namespace Itanio.Leads.WebUI.Models
 {
@@ -27,17 +27,15 @@ namespace Itanio.Leads.WebUI.Models
             {
                 Ativo = true,
                 DataHoraAcesso = DateTime.Now,
-                TipoNavegador = (TipoNavegador)Enum.Parse(typeof(TipoNavegador), this.TipoNavegador),
-                Url = this.Url,
-                IP = this.IP,
-                UserAgent = this.UserAgentInfo,
+                TipoNavegador = (TipoNavegador) Enum.Parse(typeof(TipoNavegador), TipoNavegador),
+                Url = Url,
+                IP = IP,
+                UserAgent = UserAgentInfo,
                 Visitante = visitante,
                 Arquivo = arquivo,
                 Projeto = projeto,
-                Guid = this.Guid
+                Guid = Guid
             };
         }
-
- 
     }
 }

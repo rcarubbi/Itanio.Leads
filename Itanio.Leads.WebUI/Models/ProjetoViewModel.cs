@@ -1,8 +1,8 @@
-﻿using Carubbi.Datatables;
-using Itanio.Leads.Domain.Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using Carubbi.Datatables;
+using Itanio.Leads.Domain.Entidades;
 
 namespace Itanio.Leads.WebUI.Models
 {
@@ -11,27 +11,19 @@ namespace Itanio.Leads.WebUI.Models
         [DataTablesColumn(Hidden = true, PrimaryKey = true)]
         public string Id { get; set; }
 
-        [DataTablesColumn(Order = 1)]
-        public string Nome { get; set; }
+        [DataTablesColumn(Order = 1)] public string Nome { get; set; }
 
         public bool Ativo { get; set; }
 
         [DataTablesColumn(Order = 2, SortMap = "Ativo", Header = "Ativo")]
-        public string AtivoDescr
-        {
-            get
-            {
-                return Ativo
-                    ? "Sim"
-                    : "Não";
-            }
-        }
+        public string AtivoDescr => Ativo
+            ? "Sim"
+            : "Não";
 
         [DataTablesColumn(Order = 3, Header = "URL base")]
         public string UrlBase { get; set; }
 
-        [AllowHtml]
-        public string TemplateEmail { get; set; }
+        [AllowHtml] public string TemplateEmail { get; set; }
 
         public string AssuntoEmail { get; set; }
 
@@ -41,6 +33,7 @@ namespace Itanio.Leads.WebUI.Models
 
 
         public string LandPage { get; set; }
+
         internal static ProjetoViewModel FromEntity(Projeto projeto)
         {
             return new ProjetoViewModel
@@ -62,7 +55,7 @@ namespace Itanio.Leads.WebUI.Models
             return new Projeto
             {
                 Ativo = viewModel.Ativo,
-                Id = !string.IsNullOrWhiteSpace(viewModel.Id)? new Guid(viewModel.Id) : Guid.Empty,
+                Id = !string.IsNullOrWhiteSpace(viewModel.Id) ? new Guid(viewModel.Id) : Guid.Empty,
                 Nome = viewModel.Nome,
                 UrlBase = viewModel.UrlBase,
                 TemplateEmail = viewModel.TemplateEmail,
@@ -76,10 +69,7 @@ namespace Itanio.Leads.WebUI.Models
 
         internal static IEnumerable<ProjetoViewModel> FromEntityCollection(IEnumerable<Projeto> entities)
         {
-            foreach (var item in entities)
-            {
-                yield return FromEntity(item);
-            }
+            foreach (var item in entities) yield return FromEntity(item);
         }
     }
 }

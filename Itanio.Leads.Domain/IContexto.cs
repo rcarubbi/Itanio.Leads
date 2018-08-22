@@ -1,8 +1,8 @@
-﻿using System.Data.Entity;
+﻿using Carubbi.GenericRepository;
 
 namespace Itanio.Leads.Domain
 {
-    public interface IContexto : Carubbi.GenericRepository.IDbContext
+    public interface IContexto : IDbContext
     {
         void Salvar();
 

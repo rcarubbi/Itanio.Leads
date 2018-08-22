@@ -1,12 +1,12 @@
-﻿using Itanio.Leads.Domain;
+﻿using System;
+using System.Linq;
+using System.Web;
+using System.Web.Http;
+using Itanio.Leads.Domain;
 using Itanio.Leads.Domain.Entidades;
 using Itanio.Leads.Domain.Repositorios;
 using Itanio.Leads.WebUI.Models;
 using Itanio.Leads.WebUI.Servicos;
-using System;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
 
 namespace Itanio.Leads.WebUI.Api
 {
@@ -15,23 +15,22 @@ namespace Itanio.Leads.WebUI.Api
         public AcessoController(IContexto contexto)
             : base(contexto)
         {
-
         }
 
         // POST api/values
-        public IHttpActionResult Post([FromBody]AcessoViewModel acesso)
+        public IHttpActionResult Post([FromBody] AcessoViewModel acesso)
         {
-            acesso.IP = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"].ToString();
-            
-            RepositorioProjeto projetoRepo = new RepositorioProjeto(_contexto);
+            acesso.IP = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"];
 
-            Projeto projeto = projetoRepo.ObterPorId(new Guid(acesso.IdProjeto));
-            Arquivo arquivo = projeto.Arquivos.Single(a => a.Id == new Guid(acesso.IdArquivo));
-            RepositorioVisitante visitanteRepo = new RepositorioVisitante(_contexto);
+            var projetoRepo = new RepositorioProjeto(_contexto);
 
-            ServicoVisitante visitanteServ = new ServicoVisitante(_contexto);
-            Visitante visitante = visitanteServ.ObterVisitante(acesso.Email);
-            Visitante visitanteGuid = visitanteServ.ObterVisitante(new Guid(acesso.Guid));
+            var projeto = projetoRepo.ObterPorId(new Guid(acesso.IdProjeto));
+            var arquivo = projeto.Arquivos.Single(a => a.Id == new Guid(acesso.IdArquivo));
+            var visitanteRepo = new RepositorioVisitante(_contexto);
+
+            var visitanteServ = new ServicoVisitante(_contexto);
+            var visitante = visitanteServ.ObterVisitante(acesso.Email);
+            var visitanteGuid = visitanteServ.ObterVisitante(new Guid(acesso.Guid));
 
 
             if (visitante != null && !visitante.Identificadores.Any(i => i.Guid == acesso.Guid))
@@ -51,24 +50,21 @@ namespace Itanio.Leads.WebUI.Api
                 {
                     Guid = guid,
                     Ativo = true,
-                    DataHora = DateTime.Now,
+                    DataHora = DateTime.Now
                 });
             }
             else if (visitante == null && !string.IsNullOrWhiteSpace(acesso.Email))
             {
-                visitante = visitanteServ.CriarVisitante("Não informado", acesso.Email, acesso.Guid, new Guid(acesso.IdProjeto), new Guid(acesso.IdArquivo));
+                visitante = visitanteServ.CriarVisitante("Não informado", acesso.Email, acesso.Guid,
+                    new Guid(acesso.IdProjeto), new Guid(acesso.IdArquivo));
                 acesso.Guid = visitante.Identificadores.Last().Guid;
             }
-        
-            RepositorioAcesso acessoRepo = new RepositorioAcesso(_contexto);
+
+            var acessoRepo = new RepositorioAcesso(_contexto);
             var acessoEntity = acesso.ToEntity(visitante, arquivo, projeto);
             acessoRepo.Gravar(acessoEntity);
 
-            return CreatedAtRoute("DefaultApi", new { id = acessoEntity.Id }, acesso);
+            return CreatedAtRoute("DefaultApi", new {id = acessoEntity.Id}, acesso);
         }
-
-    
-
-    
     }
 }

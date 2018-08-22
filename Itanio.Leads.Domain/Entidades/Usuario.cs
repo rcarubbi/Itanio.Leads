@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Itanio.Leads.Domain.Entidades
+﻿namespace Itanio.Leads.Domain.Entidades
 {
     public class Usuario : Entidade
     {

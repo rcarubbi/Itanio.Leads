@@ -1,5 +1,5 @@
-﻿using Itanio.Leads.Domain;
-using System.Web.Http;
+﻿using System.Web.Http;
+using Itanio.Leads.Domain;
 
 namespace Itanio.Leads.WebUI.Api
 {
@@ -10,7 +10,6 @@ namespace Itanio.Leads.WebUI.Api
         public BaseApiController(IContexto contexto)
         {
             _contexto = contexto;
-            
         }
     }
 }

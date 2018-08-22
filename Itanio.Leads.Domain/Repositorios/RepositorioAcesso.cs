@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Itanio.Leads.Domain.Entidades;
 
 namespace Itanio.Leads.Domain.Repositorios
 {
     public class RepositorioAcesso
     {
-        private IContexto _contexto;
+        private readonly IContexto _contexto;
+
         public RepositorioAcesso(IContexto contexto)
         {
             _contexto = contexto;
@@ -26,5 +24,4 @@ namespace Itanio.Leads.Domain.Repositorios
             return _contexto.Set<Acesso>().Where(a => a.Guid == guid && a.Visitante == null).ToList();
         }
     }
-
 }

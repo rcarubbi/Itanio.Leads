@@ -1,12 +1,14 @@
 ﻿using System;
-using Itanio.Leads.Domain.Entidades;
 using System.Collections.Generic;
 using System.Linq;
+using Itanio.Leads.Domain.Entidades;
+
 namespace Itanio.Leads.Domain.Repositorios
 {
     public class RepositorioProjeto
     {
-        private IContexto _contexto;
+        private readonly IContexto _contexto;
+
         public RepositorioProjeto(IContexto contexto)
         {
             _contexto = contexto;

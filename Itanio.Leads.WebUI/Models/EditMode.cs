@@ -1,6 +1,6 @@
 ﻿namespace Itanio.Leads.WebUI.Models
 {
-    public enum EditMode : int
+    public enum EditMode
     {
         Modal,
         NewWindow

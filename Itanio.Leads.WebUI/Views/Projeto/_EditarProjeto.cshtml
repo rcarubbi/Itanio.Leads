@@ -12,74 +12,74 @@
 }
 
 
-@using (Html.BeginForm("Editar", "Projeto", FormMethod.Post, new { id = "editar-projeto-form" }))
+@using (Html.BeginForm("Editar", "Projeto", FormMethod.Post, new {id = "editar-projeto-form"}))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
         @Html.HiddenFor(model => model.Id)
         <div class="form-group">
-            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-3" })
+            @Html.LabelFor(model => model.Nome, new {@class = "control-label col-md-3"})
             <div class="col-md-9">
                 @Html.EditorFor(model => model.Nome)
-                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Nome, "", new {@class = "text-danger"})
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.UrlBase, htmlAttributes: new { @class = "control-label col-md-3" })
+            @Html.LabelFor(model => model.UrlBase, new {@class = "control-label col-md-3"})
             <div class="col-md-9">
                 @Html.EditorFor(model => model.UrlBase)
-                @Html.ValidationMessageFor(model => model.UrlBase, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.UrlBase, "", new {@class = "text-danger"})
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.LandPage, htmlAttributes: new { @class = "control-label col-md-3" })
+            @Html.LabelFor(model => model.LandPage, new {@class = "control-label col-md-3"})
             <div class="col-md-9">
                 @Html.EditorFor(model => model.LandPage)
-                @Html.ValidationMessageFor(model => model.LandPage, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.LandPage, "", new {@class = "text-danger"})
             </div>
         </div>
- 
+
         <div class="form-group">
-            @Html.LabelFor(model => model.Ativo, htmlAttributes: new { @class = "control-label col-md-3" })
+            @Html.LabelFor(model => model.Ativo, new {@class = "control-label col-md-3"})
             <div class="col-md-9">
                 @Html.EditorFor(model => model.Ativo)
-                @Html.ValidationMessageFor(model => model.Ativo, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Ativo, "", new {@class = "text-danger"})
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.AssuntoEmail, htmlAttributes: new { @class = "control-label col-md-3" })
+            @Html.LabelFor(model => model.AssuntoEmail, new {@class = "control-label col-md-3"})
             <div class="col-md-9">
                 @Html.EditorFor(model => model.AssuntoEmail)
-                @Html.ValidationMessageFor(model => model.AssuntoEmail, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.AssuntoEmail, "", new {@class = "text-danger"})
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.RemetenteNome, htmlAttributes: new { @class = "control-label col-md-3" })
+            @Html.LabelFor(model => model.RemetenteNome, new {@class = "control-label col-md-3"})
             <div class="col-md-9">
                 @Html.EditorFor(model => model.RemetenteNome)
-                @Html.ValidationMessageFor(model => model.RemetenteNome, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.RemetenteNome, "", new {@class = "text-danger"})
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.RemetenteEmail, htmlAttributes: new { @class = "control-label col-md-3" })
+            @Html.LabelFor(model => model.RemetenteEmail, new {@class = "control-label col-md-3"})
             <div class="col-md-9">
                 @Html.EditorFor(model => model.RemetenteEmail)
-                @Html.ValidationMessageFor(model => model.RemetenteEmail, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.RemetenteEmail, "", new {@class = "text-danger"})
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TemplateEmail, htmlAttributes: new { @class = "control-label col-md-3" })
+            @Html.LabelFor(model => model.TemplateEmail, new {@class = "control-label col-md-3"})
             <div class="col-md-9">
                 @Html.EditorFor(model => model.TemplateEmail)
-                @Html.ValidationMessageFor(model => model.TemplateEmail, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.TemplateEmail, "", new {@class = "text-danger"})
             </div>
         </div>
 
@@ -90,16 +90,16 @@
                        data-success-update-container-id="projeto-grid-container"
                        data-success-notification-type="Success"
                        data-success-notification-message="Projeto @acaoEfetuada com sucesso"
-                       data-success-notification-title="@acao de Projeto" />
+                       data-success-notification-title="@acao de Projeto"/>
             </div>
         </div>
     </div>
 }
 
 <script>
-    (function () {
+    (function() {
         var $private = {};
-        $private.validar = function (e) {
+        $private.validar = function(e) {
             e.preventDefault();
             $(this).validate();
             $("#form-modal-container").trigger("validated.pf.form", $(".modalFormButton")[0]);

@@ -1,15 +1,13 @@
-﻿using Itanio.Leads.Domain.Entidades;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Itanio.Leads.Domain.Entidades;
 
 namespace Itanio.Leads.Domain.Repositorios
 {
     public class RepositorioVisitante
     {
-        private IContexto _contexto;
+        private readonly IContexto _contexto;
+
         public RepositorioVisitante(IContexto contexto)
         {
             _contexto = contexto;

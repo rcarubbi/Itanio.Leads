@@ -5,6 +5,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Headers;
 using System.Web.Http;
+
 #if Handle_PageResultOfT
 using System.Web.Http.OData;
 #endif
@@ -12,9 +13,10 @@ using System.Web.Http.OData;
 namespace Itanio.Leads.Api.Areas.HelpPage
 {
     /// <summary>
-    /// Use this class to customize the Help Page.
-    /// For example you can set a custom <see cref="System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
-    /// or you can provide the samples for the requests/responses.
+    ///     Use this class to customize the Help Page.
+    ///     For example you can set a custom <see cref="System.Web.Http.Description.IDocumentationProvider" /> to supply the
+    ///     documentation
+    ///     or you can provide the samples for the requests/responses.
     /// </summary>
     public static class HelpPageConfig
     {

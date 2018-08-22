@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leads- @ViewBag.Title</title>
 
@@ -16,33 +16,33 @@
 
 </head>
 <body>
-    <!-- Wrapper-->
-    <div id="wrapper">
-         
-        <!-- Page wraper -->
-        <div id="page-wrapper" class="gray-bg">
-            <!-- Top Navbar -->
-        
-            <div class="row wrapper border-bottom white-bg page-heading">
-                <div class="col-lg-10">
-                    <h2>@ViewBag.SubTitle</h2>
-                </div>
+<!-- Wrapper-->
+<div id="wrapper">
+
+    <!-- Page wraper -->
+    <div id="page-wrapper" class="gray-bg">
+        <!-- Top Navbar -->
+
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>@ViewBag.SubTitle</h2>
             </div>
-            <!-- Main view  -->
-            @RenderBody()
-
-            <!-- Footer -->
-            @Html.Partial("_Footer")
-
         </div>
-        <!-- End page wrapper-->
+        <!-- Main view  -->
+        @RenderBody()
+
+        <!-- Footer -->
+        @Html.Partial("_Footer")
 
     </div>
-    <!-- End wrapper-->
+    <!-- End page wrapper-->
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
- 
+</div>
+<!-- End wrapper-->
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
 
 </body>
 </html>

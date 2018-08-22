@@ -1,7 +1,7 @@
 ﻿@model Itanio.Leads.WebUI.Models.ModalQuestionViewModel
 @{
-    string yesButtonCssStyle = "";
-    string yesButtonDataDashAttributes = "";
+    var yesButtonCssStyle = "";
+    var yesButtonDataDashAttributes = "";
 
     if (!string.IsNullOrWhiteSpace(Model.YesButtonAction))
     {
@@ -16,8 +16,8 @@
         }
     }
 
-    string noButtonCssStyle = "";
-    string noButtonDataDashAttributes = "";
+    var noButtonCssStyle = "";
+    var noButtonDataDashAttributes = "";
 
 
     if (!string.IsNullOrWhiteSpace(Model.NoButtonAction))
@@ -51,14 +51,15 @@
     {
         noButtonDataDashAttributes += string.Format(" data-update-container-id='{0}'", Model.NoButtonUpdateContainerId);
     }
-
 }
 
 <div class="modal inmodal" id="@Model.Id" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content animated fadeInDown">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                </button>
                 <h4 class="modal-title">@Model.Title</h4>
                 <small class="font-bold"></small>
             </div>
@@ -75,21 +76,12 @@
     </div>
 </div>
 <script>
-    (function () {
+    (function() {
 
-        $(function () {
+        $(function() {
             $("#@Model.Id").modal();
         });
 
 
     }());
 </script>
-
-
-
-
-
-
-
-
-

@@ -10,15 +10,15 @@ namespace Itanio.Leads.WebUI
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-            name: "DownloadArquivo",
-            url: "Arquivo/Index/{id}",
-            defaults: new { controller = "Arquivo", action = "Index", id = UrlParameter.Optional });
-         
+                "DownloadArquivo",
+                "Arquivo/Index/{id}",
+                new {controller = "Arquivo", action = "Index", id = UrlParameter.Optional});
+
 
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                "Default",
+                "{controller}/{action}/{id}",
+                new {controller = "Home", action = "Index", id = UrlParameter.Optional}
             );
         }
     }

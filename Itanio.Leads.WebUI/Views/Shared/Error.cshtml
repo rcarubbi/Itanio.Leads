@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leads</title>
 
@@ -19,43 +19,42 @@
 
 </head>
 <body>
-    <!-- Wrapper-->
-    <div id="wrapper">
+<!-- Wrapper-->
+<div id="wrapper">
 
 
+    <!-- Page wraper -->
+    <div id="page-wrapper" class="gray-bg">
+        <!-- Top Navbar -->
+        @Html.Partial("_TopNavbar")
 
-        <!-- Page wraper -->
-        <div id="page-wrapper" class="gray-bg">
-            <!-- Top Navbar -->
-            @Html.Partial("_TopNavbar")
-        
-            <!-- Main view  -->
-            <hgroup>
-                <h1>Erro.</h1>
-                <h2> Ocorreu um erro durante sua requisição.</h2>
-            </hgroup>
+        <!-- Main view  -->
+        <hgroup>
+            <h1>Erro.</h1>
+            <h2> Ocorreu um erro durante sua requisição.</h2>
+        </hgroup>
 
 
-            <!-- Footer -->
-            @Html.Partial("_Footer")
-
-        </div>
-        <!-- End page wrapper-->
+        <!-- Footer -->
+        @Html.Partial("_Footer")
 
     </div>
-    <!-- End wrapper-->
+    <!-- End page wrapper-->
 
-    <div id="form-modal-container"></div>
+</div>
+<!-- End wrapper-->
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/plugins/slimScroll")
-    @Scripts.Render("~/plugins/iCheck")
-    @Scripts.Render("~/plugins/toastr")
-    @Scripts.Render("~/plugins/dataTables")
-    @Scripts.Render("~/bundles/app")
-    @Scripts.Render("~/bundles/jqueryval")
- 
+<div id="form-modal-container"></div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/plugins/slimScroll")
+@Scripts.Render("~/plugins/iCheck")
+@Scripts.Render("~/plugins/toastr")
+@Scripts.Render("~/plugins/dataTables")
+@Scripts.Render("~/bundles/app")
+@Scripts.Render("~/bundles/jqueryval")
+
 
 </body>
 </html>

@@ -6,7 +6,7 @@ namespace Itanio.Leads.Domain.Entidades
     {
         public virtual Projeto Projeto { get; set; }
 
-        public string NomeArquivo { get; set;  }
+        public string NomeArquivo { get; set; }
 
         public string Url { get; set; }
 

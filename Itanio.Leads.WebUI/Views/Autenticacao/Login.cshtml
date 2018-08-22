@@ -14,39 +14,39 @@
                     <div class="form-horizontal">
 
                         <div class="form-group">
-                            @Html.LabelFor(model => model.Conta, htmlAttributes: new { @class = "control-label col-md-4" })
+                            @Html.LabelFor(model => model.Conta, new {@class = "control-label col-md-4"})
                             <div class="col-md-8">
                                 @Html.EditorFor(model => model.Conta)
-                                @Html.ValidationMessageFor(model => model.Conta, "", new { @class = "text-danger" })
+                                @Html.ValidationMessageFor(model => model.Conta, "", new {@class = "text-danger"})
                             </div>
                         </div>
 
                         <div class="form-group">
-                            @Html.LabelFor(model => model.Senha, htmlAttributes: new { @class = "control-label col-md-4" })
+                            @Html.LabelFor(model => model.Senha, new {@class = "control-label col-md-4"})
                             <div class="col-md-8">
                                 @Html.EditorFor(model => model.Senha)
-                                @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+                                @Html.ValidationMessageFor(model => model.Senha, "", new {@class = "text-danger"})
                             </div>
                         </div>
 
                         <div class="form-group">
-                            @Html.LabelFor(model => model.MantenhaMeConectado, htmlAttributes: new { @class = "control-label col-md-4" })
+                            @Html.LabelFor(model => model.MantenhaMeConectado, new {@class = "control-label col-md-4"})
                             <div class="col-md-8">
                                 <div class="checkbox">
                                     @Html.EditorFor(model => model.MantenhaMeConectado)
-                                    @Html.ValidationMessageFor(model => model.MantenhaMeConectado, "", new { @class = "text-danger" })
+                                    @Html.ValidationMessageFor(model => model.MantenhaMeConectado, "", new {@class = "text-danger"})
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-8">
-                                <input type="submit" value="Login" class="btn btn-primary" />
-                                @Html.ActionLink("Esqueci minha senha", "EsqueciMinhaSenha", null, new { @class = "btn btn-w-m btn-success btn-outline" })
+                                <input type="submit" value="Login" class="btn btn-primary"/>
+                                @Html.ActionLink("Esqueci minha senha", "EsqueciMinhaSenha", null, new {@class = "btn btn-w-m btn-success btn-outline"})
                             </div>
                         </div>
                         <div class="col-md-offset-4 col-md-8">
-                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @Html.ValidationSummary(true, "", new {@class = "text-danger"})
                         </div>
                     </div>
                 }
@@ -54,5 +54,3 @@
         </div>
     </div>
 </div>
-
-
